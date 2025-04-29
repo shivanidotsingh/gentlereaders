@@ -3,52 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EisE</title>
-    <link rel="stylesheet" href="style.css"> 
-</head>
+    <title>Gentle Readers</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
-    <header>
-        <h1>Ajay and Amit’s end of episode recommendations on the podcast Everything is Everything</h1>
-        <div class="filter-container">
-            <div id="region-search-sort-group">
-                <div id="region-filter-group" class="filter-group">
-                    <label for="region-filter">Region:</label>
-                    <select id="region-filter">
-                        <option value="all">All Regions</option>
-                    </select>
-                </div>
-                
-                <div id="sort-filter-group" class="filter-group">
-                    <label for="sort-select">Sort by:</label>
-                    <select id="sort-select">
-                        <option value="year">Episode</option>
-                        <option value="title">Title</option>
-                    </select>
-                </div>
 
-                 <div id="search-filter-group" class="filter-group">
-                    <label for="search">Search:</label>
-                    <input type="text" id="search" placeholder="Search shows...">
-                </div>
-                
+    <div class="container">
+        <h1>End of Episode Recommendations</h1>
+
+        <div class="controls">
+            Sort by:
+            <button id="sort-by-title">Title</button>
+            <button id="sort-by-episode">Episode</button>
             </div>
-            <div id="filter-by-group" class="filter-group">
-                <label>Filter:</label>
-                <div class="checkbox-filters">
-                    
-                    <label><input type="checkbox" id="gem-filter"> 💎 </label>
-                </div>
+
+        <div id="app" class="recommendations-list">
             </div>
-            <button id="reset-filters">Reset Filters</button>
-        </div>
-    </header>
-    
-    <main id="shows-container">
-        <div class="loading">Loading your collection...</div>
-    </main>
+    </div>
 
     <script src="data.js"></script>
     <script src="script.js"></script>
-    
 </body>
 </html>
