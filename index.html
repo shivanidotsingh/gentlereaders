@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gentle Readers</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Book Recommendations</title>
+</head>
 <body>
-
     <div class="container">
-        <h1>End of Episode Recommendations</h1>
-
+        <header>
+            <h1>Everything is Everything</h1>
+            <p>A curated collection of book recommendations</p>
+        </header>
+        
         <div class="controls">
-            Sort by:
-            <button id="sort-by-title">Title</button>
-            <button id="sort-by-episode">Episode</button>
+            <div class="sort-controls">
+                <span>Sort by:</span>
+                <button id="sort-title" class="sort-btn active">Title</button>
+                <button id="sort-episode" class="sort-btn">Episode</button>
             </div>
-
-        <div id="app" class="recommendations-list">
+            <div class="filter-controls">
+                <span>Filter:</span>
+                <button id="filter-all" class="filter-btn active">All</button>
+                <button id="filter-special" class="filter-btn">Special (🪄)</button>
+                <button id="filter-books" class="filter-btn">Books</button>
+                <button id="filter-media" class="filter-btn">Other Media</button>
             </div>
+            <div class="search-controls">
+                <input type="text" id="search-input" placeholder="Search..." style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px;">
+            </div>
+        </div>
+        
+        <div class="card-grid" id="books-container">
+            <!-- Book cards will be dynamically inserted here -->
+        </div>
     </div>
-
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
