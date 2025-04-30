@@ -91,8 +91,16 @@
             background-color: var(--other-color); 
             border-color: var(--other-color); 
         } 
+#filter-movie.active {
+    background-color: /* your movie color */;
+    border-color: /* your movie color */;
+}
+ #filter-music.active {
+    background-color: var(--music-color); /* Using your music variable */
+    border-color: var(--music-color);
+}
          
-        .card-grid { 
+        #books-container { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
             gap: 2rem; 
