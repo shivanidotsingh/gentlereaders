@@ -4,6 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Recommendations</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --bg-color: #fff;
+            --card-bg: #f9f9f9;
+            --border-color: #eaeaea;
+            --accent-color: #0070f3;
+            --special-color: #8a2be2;
+            --book-color: #0070f3;
+            --music-color: #e84118;
+            --film-color: #2ed573;
+            --podcast-color: #ffa502;
+            --other-color: #747d8c;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .sort-controls, .filter-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        select, button {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        button {
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: var(--border-color);
+        }
+        
+        button.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+        
+        #filter-special.active {
+            background-color: var(--special-color);
+            border-color: var(--special-color);
+        }
+        
+        #filter-books.active {
+            background-color: var(--book-color);
+            border-color: var(--book-color);
+        }
+        
+        #filter-media.active {
+            background-color: var(--other-color);
+            border-color: var(--other-color);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-image {
+            height: 200px;
+            background-color: #e0e0e0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image.no-image::after {
+            content: "No Cover Available";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .card-title.special::before {
+            content: "🪄 ";
+        }
+        
+        .card-author {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-episode {
+            display: inline-block;
+            background-color: var(--border-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .card-type {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        .card-type.book {
+            background-color: var(--book-color);
+        }
+        
+        .card-type.music {
+            background-color: var(--music-color);
+        }
+        
+        .card-type.film {
+            background-color: var(--film-color);
+        }
+        
+        .card-type.podcast {
+            background-color: var(--podcast-color);
+        }
+        
+        .card-type.other {
+            background-color: var(--other-color);
+        }
+        
+        .card-notes {
+            font-style: italic;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -34,3 +247,335 @@
             <!-- Book cards will be dynamically inserted here -->
         </div>
     </div>
+
+    <script>
+        // Actual book data from EIE recommendations
+        const books = [
+            {
+                title: "The Curious Incident of the Dog in the Night-time",
+                author: "Mark Haddon",
+                episode: 1,
+                coverUrl: "https://books.google.com/books/content?id=OWUbAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=OWUbAQAAMAAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Songs of Surrender",
+                author: "U2",
+                episode: 1,
+                coverUrl: "https://www.u2.com/media/uploads/2022/12/15/songs-of-surrender-product-shot.jpg",
+                googleBooksUrl: "https://books.google.com/books?q=U2+Songs+of+Surrender",
+                isSpecial: true,
+                type: "music"
+            },
+            {
+                title: "A Vindication of the Rights of Woman",
+                author: "Mary Wollstonecraft",
+                episode: 2,
+                coverUrl: "https://books.google.com/books/content?id=qhcFAAAAQAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=qhcFAAAAQAAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Frankenstein",
+                author: "Mary Shelley",
+                episode: 2,
+                coverUrl: "https://books.google.com/books/content?id=2Zc3AAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=2Zc3AAAAYAAJ",
+                isSpecial: false,
+                type: "book",
+                notes: "Daughter of Mary Wollstonecraft"
+            },
+            {
+                title: "Romantic Outlaws",
+                author: "Charlotte Gordon",
+                episode: 2,
+                coverUrl: "https://books.google.com/books/content?id=xNKuBgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=xNKuBgAAQBAJ",
+                isSpecial: false,
+                type: "book",
+                notes: "about the two Marys"
+            },
+            {
+                title: "Saaya & the Rituals of Tamil Muslim Milk Tea",
+                author: "Maazin Buhari",
+                episode: 2,
+                coverUrl: "/api/placeholder/280/200",
+                googleBooksUrl: "https://books.google.com/books?q=Saaya+Tamil+Muslim+Milk+Tea",
+                isSpecial: true,
+                type: "book"
+            },
+            {
+                title: "Classical Liberalism - A Primer",
+                author: "Eamonn Butler",
+                episode: 3,
+                coverUrl: "https://books.google.com/books/content?id=vg4wDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=vg4wDwAAQBAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Friedrich Hayek: The ideas and influence of the libertarian economist",
+                author: "Eamonn Butler",
+                episode: 3,
+                coverUrl: "https://books.google.com/books/content?id=qwwZzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=qwwZzwEACAAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Ludwig von Mises – A Primer",
+                author: "Eamonn Butler",
+                episode: 3,
+                coverUrl: "https://books.google.com/books/content?id=3i8NEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=3i8NEAAAQBAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Milton Friedman: A concise guide to the ideas and influence of the free-market economist",
+                author: "Eamonn Butler",
+                episode: 3,
+                coverUrl: "https://books.google.com/books/content?id=jxEpDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=jxEpDwAAQBAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Public Choice – A Primer",
+                author: "Eamonn Butler",
+                episode: 3,
+                coverUrl: "https://books.google.com/books/content?id=nPDmBQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=nPDmBQAAQBAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Adam Smith – A Primer",
+                author: "Eamonn Butler",
+                episode: 3,
+                coverUrl: "https://books.google.com/books/content?id=yYtXDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=yYtXDwAAQBAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "A Business History of India",
+                author: "Tirthankar Roy",
+                episode: 4,
+                coverUrl: "https://books.google.com/books/content?id=vN8_DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=vN8_DwAAQBAJ",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "Dekalog, A Short Film About Love, A Short Film About Killing",
+                author: "Krzysztof Kieślowski",
+                episode: 4,
+                coverUrl: "/api/placeholder/280/200",
+                googleBooksUrl: "https://books.google.com/books?q=Krzysztof+Kieślowski+Dekalog",
+                isSpecial: true,
+                type: "film"
+            },
+            {
+                title: "The Making of the Atomic Bomb",
+                author: "Richard Rhodes",
+                episode: 5,
+                coverUrl: "https://books.google.com/books/content?id=aSgFMMNQ6G4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=aSgFMMNQ6G4C",
+                isSpecial: false,
+                type: "book"
+            },
+            {
+                title: "The Power Broker",
+                author: "Robert Caro",
+                episode: 5,
+                coverUrl: "https://books.google.com/books/content?id=nIVvJYnygRQC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+                googleBooksUrl: "https://books.google.com/books?id=nIVvJYnygRQC",
+                isSpecial: false,
+                type: "book"
+            }
+        ];
+        
+        // DOM elements
+        const booksContainer = document.getElementById('books-container');
+        const sortTitleBtn = document.getElementById('sort-title');
+        const sortEpisodeBtn = document.getElementById('sort-episode');
+        const searchInput = document.getElementById('search-input');
+        
+        // DOM elements for filters
+        const filterAllBtn = document.getElementById('filter-all');
+        const filterSpecialBtn = document.getElementById('filter-special');
+        const filterBooksBtn = document.getElementById('filter-books');
+        const filterMediaBtn = document.getElementById('filter-media');
+        
+        // Current states
+        let currentSort = 'title';
+        let searchTerm = '';
+        let currentFilter = 'all';
+        
+        // Render all books
+        function renderBooks() {
+            // Clear existing books
+            booksContainer.innerHTML = '';
+            
+            // Apply filters
+            const filteredBooks = books.filter(book => {
+                // Search filter
+                const matchesSearch = 
+                    book.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                    book.author.toLowerCase().includes(searchTerm.toLowerCase());
+                
+                // Type filters
+                let matchesFilter = true;
+                if (currentFilter === 'special') {
+                    matchesFilter = book.isSpecial;
+                } else if (currentFilter === 'books') {
+                    matchesFilter = book.type === 'book';
+                } else if (currentFilter === 'media') {
+                    matchesFilter = book.type !== 'book';
+                }
+                
+                return matchesSearch && matchesFilter;
+            });
+            
+            // Sort filtered books
+            const sortedBooks = [...filteredBooks].sort((a, b) => {
+                if (currentSort === 'title') {
+                    return a.title.localeCompare(b.title);
+                } else {
+                    return a.episode - b.episode;
+                }
+            });
+            
+            // Create book cards
+            sortedBooks.forEach(book => {
+                const card = document.createElement('a');
+                card.className = 'card';
+                card.href = book.googleBooksUrl;
+                card.target = '_blank';
+                
+                // Prepare type label
+                const typeLabel = book.type.charAt(0).toUpperCase() + book.type.slice(1);
+                
+                // Create card HTML with fallback for image loading errors
+                card.innerHTML = `
+                    <div class="card-image" style="background-image: url('${book.coverUrl}')" onerror="this.classList.add('no-image')"></div>
+                    <div class="card-content">
+                        <h3 class="card-title ${book.isSpecial ? 'special' : ''}">${book.title}</h3>
+                        <div class="card-author">${book.author}</div>
+                        <div class="card-badges">
+                            <span class="card-type ${book.type}">${typeLabel}</span>
+                            <span class="card-episode">Episode ${book.episode}</span>
+                        </div>
+                        ${book.notes ? `<div class="card-notes">${book.notes}</div>` : ''}
+                    </div>
+                `;
+                
+                booksContainer.appendChild(card);
+            });
+            
+            // Show message if no results
+            if (sortedBooks.length === 0) {
+                booksContainer.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 2rem;">No results found</div>';
+            }
+        }
+        
+        // Event listeners for sorting
+        sortTitleBtn.addEventListener('click', () => {
+            currentSort = 'title';
+            updateSortButtons();
+            renderBooks();
+        });
+        
+        sortEpisodeBtn.addEventListener('click', () => {
+            currentSort = 'episode';
+            updateSortButtons();
+            renderBooks();
+        });
+        
+        // Event listeners for filtering
+        filterAllBtn.addEventListener('click', () => {
+            currentFilter = 'all';
+            updateFilterButtons();
+            renderBooks();
+        });
+        
+        filterSpecialBtn.addEventListener('click', () => {
+            currentFilter = 'special';
+            updateFilterButtons();
+            renderBooks();
+        });
+        
+        filterBooksBtn.addEventListener('click', () => {
+            currentFilter = 'books';
+            updateFilterButtons();
+            renderBooks();
+        });
+        
+        filterMediaBtn.addEventListener('click', () => {
+            currentFilter = 'media';
+            updateFilterButtons();
+            renderBooks();
+        });
+        
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderBooks();
+        });
+        
+        // Update button active states
+        function updateSortButtons() {
+            sortTitleBtn.classList.toggle('active', currentSort === 'title');
+            sortEpisodeBtn.classList.toggle('active', currentSort === 'episode');
+        }
+        
+        function updateFilterButtons() {
+            filterAllBtn.classList.toggle('active', currentFilter === 'all');
+            filterSpecialBtn.classList.toggle('active', currentFilter === 'special');
+            filterBooksBtn.classList.toggle('active', currentFilter === 'books');
+            filterMediaBtn.classList.toggle('active', currentFilter === 'media');
+        }
+        
+        // Function to fetch book cover from Google Books API
+        async function fetchBookCover(title, author) {
+            try {
+                const query = encodeURIComponent(`${title} ${author}`);
+                const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+                
+                // Note: In a real implementation, you'd make this API call.
+                // For demo purposes, we're using static images.
+                // const response = await fetch(url);
+                // const data = await response.json();
+                // if (data.items && data.items[0].volumeInfo.imageLinks) {
+                //     return data.items[0].volumeInfo.imageLinks.thumbnail;
+                // }
+                return null;
+            } catch (error) {
+                console.error('Error fetching book cover:', error);
+                return null;
+            }
+        }
+        
+        // Function to load book covers if not already set
+        async function loadBookCovers() {
+            for (let book of books) {
+                if (book.coverUrl === "/api/placeholder/280/200") {
+                    const coverUrl = await fetchBookCover(book.title, book.author);
+                    if (coverUrl) {
+                        book.coverUrl = coverUrl;
+                    }
+                }
+            }
+            renderBooks();
+        }
+        
+        // Initial render and load covers
+        renderBooks();
+        // loadBookCovers(); // Uncomment to use Google Books API
+    </script>
+</body>
+</html>
