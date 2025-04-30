@@ -153,38 +153,36 @@
         filterMediaBtn.classList.toggle('active', currentFilter === 'media');
     }
 
-    // Function to fetch book cover from Google Books API (commented out)
-    // async function fetchBookCover(title, author) {
-    //     try {
-    //         const query = encodeURIComponent(`${title} ${author}`);
-    //         const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
-    //         // Note: In a real implementation, you'd make this API call.
-    //         // For demo purposes, we're using static images.
-    //         // const response = await fetch(url);
-    //         // const data = await response.json();
-    //         // if (data.items && data.items[0].volumeInfo.imageLinks) {
-    //         //     return data.items[0].volumeInfo.imageLinks.thumbnail;
-    //         // }
-    //         return null;
-    //     } catch (error) {
-    //         console.error('Error fetching book cover:', error);
-    //         return null;
-    //     }
-    // }
+    // Function to fetch book cover from Google Books API
+    async function fetchBookCover(title, author) {
+        try {
+            const query = encodeURIComponent(`${title} ${author}`);
+            const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+            const response = await fetch(url);
+            const data = await response.json();
+            if (data.items && data.items[0].volumeInfo && data.items[0].volumeInfo.imageLinks && data.items[0].volumeInfo.imageLinks.thumbnail) {
+                return data.items[0].volumeInfo.imageLinks.thumbnail;
+            }
+            return null;
+        } catch (error) {
+            console.error('Error fetching book cover:', error);
+            return null;
+        }
+    }
 
-    // Function to load book covers if not already set (commented out)
-    // async function loadBookCovers() {
-    //     for (let book of books) {
-    //         if (book.coverUrl === "/api/placeholder/280/200") {
-    //             const coverUrl = await fetchBookCover(book.title, book.author);
-    //             if (coverUrl) {
-    //                 book.coverUrl = coverUrl;
-    //             }
-    //         }
-    //     }
-    //     renderBooks();
-    // }
+    // Function to load book covers if not already set
+    async function loadBookCovers() {
+        for (let book of books) {
+            if (book.coverUrl === "/api/placeholder/280/200") {
+                const coverUrl = await fetchBookCover(book.title, book.author);
+                if (coverUrl) {
+                    book.coverUrl = coverUrl;
+                }
+            }
+        }
+        renderBooks(); // Re-render after attempting to load covers
+    }
 
     // Initial render and load covers
     renderBooks();
-    // loadBookCovers(); // Uncomment to use Google Books API
+    loadBookCovers(); // Call to load covers
