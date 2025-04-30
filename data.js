@@ -1050,7 +1050,7 @@ author: "John Keay",
 episode: 44,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Great+Arc+-+John+Keay",
-tags: ["bis-sessions", "book", "history"],
+tags: ["bir-sessions", "book", "history"],
 notes: ""
 },
 {
@@ -1059,7 +1059,7 @@ author: "Ridley Scott",
 episode: 44,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Thelma+and+Louise+Ridley+Scott",
-tags: ["bis-sessions", "movie", "film"],
+tags: ["bir-sessions", "movie", "film"],
 notes: ""
 },
 {
@@ -1068,7 +1068,7 @@ author: "Walter Block",
 episode: 45,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Defending+the+Undefendable+Walter+Block",
-tags: ["bis-sessions", "book", "economics", "philosophy"],
+tags: ["bir-sessions", "book", "economics", "philosophy"],
 notes: ""
 },
 {
@@ -1077,7 +1077,7 @@ author: "Arnold King",
 episode: 45,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Three+Languages+of+Politics+-+Arnold+King",
-tags: ["bis-sessions", "book", "politics"],
+tags: ["bir-sessions", "book", "politics"],
 notes: ""
 },
 {
@@ -1086,7 +1086,7 @@ author: "Christopher Blattman",
 episode: 45,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Why+we+Fight+-+Christopher+Blattman",
-tags: ["bis-sessions", "book", "politics", "conflict"],
+tags: ["bir-sessions", "book", "politics", "conflict"],
 notes: ""
 },
 {
@@ -1095,7 +1095,7 @@ author: "Jane Jacobs",
 episode: 47,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Death+and+Life+of+Great+American+Cities+-+Jane+Jacobs",
-tags: ["bis-sessions", "book", "urbanism", "sociology"],
+tags: ["bir-sessions", "book", "urbanism", "sociology"],
 notes: ""
 },
 {
@@ -1104,7 +1104,7 @@ author: "Edward Glaeser",
 episode: 47,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Triumph+of+the+City+-+Edward+Glaeser",
-tags: ["bis-sessions", "book", "urbanism", "economics"],
+tags: ["bir-sessions", "book", "urbanism", "economics"],
 notes: ""
 },
 {
@@ -1113,7 +1113,7 @@ author: "",
 episode: 48,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Research+papers+list+by+Ajay.",
-tags: ["bis-sessions", "research papers"],
+tags: ["bir-sessions", "research papers"],
 notes: ""
 },
 {
@@ -1122,7 +1122,7 @@ author: "Garry Kasparov",
 episode: 52,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=How+Life+Imitates+Chess+-+Garry+Kasparov",
-tags: ["bis-sessions", "book", "strategy", "chess"],
+tags: ["bir-sessions", "book", "strategy", "chess"],
 notes: ""
 },
 {
@@ -1131,7 +1131,7 @@ author: "Florian Henckel von Donnersmarck",
 episode: 51,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Lives+of+Others+-+Florian+Henckel+von+Donnersmarck",
-tags: ["bis-sessions", "movie", "film"],
+tags: ["bir-sessions", "movie", "film"],
 notes: ""
 },
 {
@@ -1140,7 +1140,7 @@ author: "",
 episode: 54,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=To+Kill+a+Mocking+Bird+",
-tags: ["bis-sessions", "book", "fiction"],
+tags: ["bir-sessions", "book", "fiction"],
 notes: ""
 },
 {
@@ -1149,7 +1149,7 @@ author: "",
 episode: 54,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Lydia+Davis:+Collected+stories,+Essays",
-tags: ["bis-sessions", "book", "short-stories", "essays"],
+tags: ["bir-sessions", "book", "short-stories", "essays"],
 notes: ""
 },
 {
@@ -1158,7 +1158,7 @@ author: "",
 episode: 55,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Odd+Woman+and+the+City+",
-tags: ["bis-sessions", "book", "memoir", "essays"],
+tags: ["bir-sessions", "book", "memoir", "essays"],
 notes: ""
 },
 {
@@ -1167,7 +1167,7 @@ author: "",
 episode: 55,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Young+Rural+Women+in+India+Chase+Big-City+Dreams+(NYT)",
-tags: ["bis-sessions", "article", "essay", "sociology"],
+tags: ["bir-sessions", "article", "essay", "sociology"],
 notes: ""
 },
 {
@@ -1185,7 +1185,7 @@ author: "",
 episode: 56,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Short+Cuts+(Film+based+on+Raymond+Carver+original+short+stories).",
-tags: ["bis-sessions", "movie", "film", "short-stories-adaptation"],
+tags: ["bir-sessions", "movie", "film", "short-stories-adaptation"],
 notes: ""
 },
 {
@@ -1194,7 +1194,7 @@ author: "",
 episode: 57,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Lant+Pritchett+-+National+Development+Delivers:+And+How!,+Reforming+Development+Economics",
-tags: ["bis-sessions", "book", "economics", "development"],
+tags: ["bir-sessions", "book", "economics", "development"],
 notes: ""
 },
 {
@@ -1203,7 +1203,7 @@ author: "Barry Lopez",
 episode: 58,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Horizon+-+Barry+Lopez",
-tags: ["bis-sessions", "book", "nature", "essays"],
+tags: ["bir-sessions", "book", "nature", "essays"],
 notes: ""
 },
 {
@@ -1212,7 +1212,7 @@ author: "Alain Bertaud",
 episode: 58,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Order+without+Design+-+Alain+Bertaud",
-tags: ["bis-sessions", "book", "urbanism", "economics"],
+tags: ["bir-sessions", "book", "urbanism", "economics"],
 notes: ""
 },
 {
@@ -1221,7 +1221,7 @@ author: "",
 episode: 58,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Trek+the+Sahyadris+",
-tags: ["bis-sessions", "travel", "guide"],
+tags: ["bir-sessions", "travel", "guide"],
 notes: ""
 },
 {
@@ -1230,7 +1230,7 @@ author: "",
 episode: 59,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=How+Innovation+Works:+And+Why+It+Flourishes+in+Freedom",
-tags: ["bis-sessions", "book", "innovation", "economics"],
+tags: ["bir-sessions", "book", "innovation", "economics"],
 notes: ""
 },
 {
@@ -1239,7 +1239,7 @@ author: "",
 episode: 59,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Huntsville,+Alabama+(to+study).",
-tags: ["bis-sessions", "place", "study"],
+tags: ["bir-sessions", "place", "study"],
 notes: ""
 },
 {
