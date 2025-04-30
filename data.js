@@ -1,4 +1,3 @@
-// Actual book data from EIE recommendations
 const books = [
     {
         title: "Songs of Surrender",
@@ -6,7 +5,7 @@ const books = [
         episode: 1,
         coverUrl: "https://www.u2.com/media/uploads/2022/12/15/songs-of-surrender-product-shot.jpg",
         googleBooksUrl: "https://books.google.com/books?q=U2+Songs+of+Surrender",
-        isSpecial: true,
+         
         type: "music",
         notes: ""
     },
@@ -16,7 +15,7 @@ const books = [
         episode: 1,
         coverUrl: "https://books.google.com/books/content?id=OWUbAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?id=OWUbAQAAMAAJ",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -26,7 +25,7 @@ const books = [
         episode: 2,
         coverUrl: "https://books.google.com/books/content?id=qhcFAAAAQAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?id=qhcFAAAAQAAJ",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -36,7 +35,7 @@ const books = [
         episode: 2,
         coverUrl: "https://books.google.com/books/content?id=2Zc3AAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?id=2Zc3AAAAYAAJ",
-        isSpecial: false,
+         
         type: "book",
         notes: "Daughter of Mary Wollstonecraft"
     },
@@ -46,7 +45,7 @@ const books = [
         episode: 2,
         coverUrl: "https://books.google.com/books/content?id=xNKuBgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?id=xNKuBgAAQBAJ",
-        isSpecial: false,
+         
         type: "book",
         notes: "about the two Marys"
     },
@@ -56,7 +55,7 @@ const books = [
         episode: 2,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Saaya+Tamil+Muslim+Milk+Tea",
-        isSpecial: true,
+         
         type: "book",
         notes: ""
     },
@@ -66,7 +65,7 @@ const books = [
         episode: 3,
         coverUrl: "https://books.google.com/books/content?id=yYtXDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?q=Adam+Smith+%E2%80%93+A+Primer+Eamonn+Butler",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -76,7 +75,7 @@ const books = [
         episode: 3,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Classical+Liberalism+-+A+Primer+Eamonn+Butler",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -86,7 +85,7 @@ const books = [
         episode: 3,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Friedrich+Hayek:+The+ideas+and+influence+of+the+libertarian+economist+Eamonn+Butler",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -96,7 +95,7 @@ const books = [
         episode: 3,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Ludwig+von+Mises+%E2%80%93+A+Primer+Eamonn+Butler",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -106,7 +105,7 @@ const books = [
         episode: 3,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Milton+Friedman:+A+concise+guide+to+the+ideas+and+influence+of+the+free-market+economist+Eamonn+Butler",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -116,7 +115,7 @@ const books = [
         episode: 3,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Public+Choice+%E2%80%93+A+Primer+Eamonn+Butler",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -126,7 +125,7 @@ const books = [
         episode: 4,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=A+Business+History+of+India+Tirthankar+Roy.",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -136,7 +135,7 @@ const books = [
         episode: 4,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Krzysztof+Kieślowski:+Dekalog,.+A+Short+Film+About+Love,+A+Short+Film+About+Killing",
-        isSpecial: true,
+         
         type: "film",
         notes: ""
     },
@@ -146,7 +145,7 @@ const books = [
         episode: 5,
         coverUrl: "https://books.google.com/books/content?id=aSgFMMNQ6G4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?id=aSgFMMNQ6G4C",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -156,7 +155,7 @@ const books = [
         episode: 5,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Life+and+Death+of+Great+American+Cities+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -166,7 +165,7 @@ const books = [
         episode: 5,
         coverUrl: "https://books.google.com/books/content?id=nIVvJYnygRQC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?id=nIVvJYnygRQC",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -176,7 +175,7 @@ const books = [
         episode: 6,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Capitalism+and+Freedom+-+Milton+Friedman",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -186,7 +185,7 @@ const books = [
         episode: 6,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Economics+in+one+lesson+-+Henry+Haznik",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -196,7 +195,7 @@ const books = [
         episode: 6,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Free+to+Choose+Milton+Friedman",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -206,7 +205,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Ascent+of+Man+-+Jason+Bronowsky",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -216,7 +215,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Collected+Works+of+Mahatma+Gandhi+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -226,7 +225,7 @@ const books = [
         episode: 8,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Essays+by+George+Orwell,+Politics+and+the+English+Language+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -236,7 +235,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Essays+in+Persuasion,+Essays+in+Biography-John+Keynes+(who+they+disagree+with).",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -246,7 +245,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Essays+of+Paul+Graham+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -256,7 +255,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Fear+the+Boom+and+Bust:+Keynes+vs.+Hayek+-+The+Original+Economics+Rap+Battle+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -266,7 +265,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Gandhi+Ramchandra+Guha",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -276,7 +275,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Gandhi+before+India+-+Ramchandra+Guha",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -286,7 +285,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Good+Boatman:+A+Portrait+of+Gandhi+-+Rajmohan+Gandhi",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -296,7 +295,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Great+Soul:+Mahatma+Gandhi+and+his+Struggle+with+India+-+Joseph+Lelyveld",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -306,7 +305,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=His+Dark+Materials+-+Philip+Pullman",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -316,7 +315,7 @@ const books = [
         episode: 8,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Elusive+Quest+for+Growth+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -326,7 +325,7 @@ const books = [
         episode: 8,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Joan+Didion+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -336,7 +335,7 @@ const books = [
         episode: 7,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+White+Crow+Books+and+coffee+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -346,7 +345,7 @@ const books = [
         episode: 8,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+White+Man's+Burden+-+William+Easterly.",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -356,7 +355,7 @@ const books = [
         episode: 9,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Barack+Obama+-+David+Remnick",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -366,7 +365,7 @@ const books = [
         episode: 9,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Emergency:+A+Personal+History+Coomi+Kapoor",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -376,7 +375,7 @@ const books = [
         episode: 9,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=FreeStyle+Libre+Glucose+Monitoring+System+(Reader+&+Sensor)+",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -386,7 +385,7 @@ const books = [
         episode: 9,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Lenin's+Tomb:+The+Last+Days+of+the+Soviet+Empire+-+David+Remnick",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -396,7 +395,7 @@ const books = [
         episode: 10,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Tripurdaman+Singh+-+Sixteen+Stormy+Days+and+Nehru:+The+Debates+that+Defined+India+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -406,7 +405,7 @@ const books = [
         episode: 12,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Early+Indians+-+Tony+Joseph",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -416,7 +415,7 @@ const books = [
         episode: 12,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Fermentation+and+Kefir+Grain+",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -426,7 +425,7 @@ const books = [
         episode: 12,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=India+Moving+-+Chinmay+Tumbe",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -436,7 +435,7 @@ const books = [
         episode: 12,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Wanderers,+Kings,+Merchants+-+Peggy+Mohan",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -446,7 +445,7 @@ const books = [
         episode: 12,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Who+We+Are+and+How+We+Got+Here+David+Reich",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -456,7 +455,7 @@ const books = [
         episode: 13,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Born+to+Run+(the+book)+-+Bruce+Springsteen",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -466,7 +465,7 @@ const books = [
         episode: 13,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Bruce+Springsteen:+All+the+Songs+Philippe+Margotin+and+Jean-Michel+Guesdon",
-        isSpecial: false,
+         
         type: "song",
         notes: ""
     },
@@ -476,7 +475,7 @@ const books = [
         episode: 13,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Notebook+Trilogy+Agota+Kristof",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -486,7 +485,7 @@ const books = [
         episode: 13,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=(Father+and+Son)+The+Road+-+Cormac+McCarthy",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -496,7 +495,7 @@ const books = [
         episode: 13,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Self-Portrait+-+AK+Ramanujan",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -506,7 +505,7 @@ const books = [
         episode: 14,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=How+the+War+Was+Won+-+Phillips+Payson+O'Brien",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -516,7 +515,7 @@ const books = [
         episode: 14,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Ode+To+Kirihito+-+Osamu+Tezuka+(Buddha+series).",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -526,7 +525,7 @@ const books = [
         episode: 15,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Great+Mental+Models+Shane+Parrish+(Knowledge+Project+Podcast).",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -536,7 +535,7 @@ const books = [
         episode: 15,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Lady+Tasting+Tea+-+David+Salsburg",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -546,7 +545,7 @@ const books = [
         episode: 16,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Alison+Bechdel+-+The+Essential+Dykes+To+Watch+Out+For,+Fun+Home",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -556,7 +555,7 @@ const books = [
         episode: 16,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Blankets+Craig+Thompson",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -566,7 +565,7 @@ const books = [
         episode: 16,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=China's+Future+David+Shambaugh",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -576,7 +575,7 @@ const books = [
         episode: 16,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Ghost+World+-+Daniel+Clowes",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -586,7 +585,7 @@ const books = [
         episode: 17,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Hardcore+History_(podcast)+—\u00a0Dan+Carlin+Supernova+in+the+East,+Blueprint+for+Armageddon",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -596,7 +595,7 @@ const books = [
         episode: 17,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Public+Opinion+-+Walter+Lippmann",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -606,7 +605,7 @@ const books = [
         episode: 17,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Seizing+the+Enigma+-+David+Kahn",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -616,7 +615,7 @@ const books = [
         episode: 18,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Down+to+Earth+-+Sharad+Joshi",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -626,7 +625,7 @@ const books = [
         episode: 18,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Talking+to+an+Empty+Room+-+Sharad+Joshi",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -636,7 +635,7 @@ const books = [
         episode: 18,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Wizard+and+the+Prophet+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -646,7 +645,7 @@ const books = [
         episode: 19,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Superforecasting:+The+Art+and+Science+of+Prediction+-+Philip+Tetlock+&+Dan+Gardner",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -656,7 +655,7 @@ const books = [
         episode: 19,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Thinking+Strategically:+The+Competitive+Edge+in+Business,+Politics,+and+Everyday+Life+-+Avinash+Dixit+&+Barry+Nalebuff",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -666,7 +665,7 @@ const books = [
         episode: 20,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Origins+of+Totalitarianism+-+Hannah+Arendt",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -676,7 +675,7 @@ const books = [
         episode: 20,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Yuganta+Irawati+Karve",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -686,7 +685,7 @@ const books = [
         episode: 21,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Capital+Ideas+-+Peter+L+Bernstein+(dated+but+basics).",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -696,7 +695,7 @@ const books = [
         episode: 21,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Pathan+Unarmed+-+Mukulika+Banerjee",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -706,7 +705,7 @@ const books = [
         episode: 21,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Timur+Kuran+-+Private+Truths,+Public+Lies+++The+Long+Divergence+++Freedoms+Delayed",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -716,7 +715,7 @@ const books = [
         episode: 22,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Creative+Act:+A+Way+of+Being+-+Rick+Rubin",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -726,7 +725,7 @@ const books = [
         episode: 22,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=A+Moveable+Feast+-+Ernest+Hemingway.",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -736,7 +735,7 @@ const books = [
         episode: 22,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Soul+of+a+New+Machine+-+Tracy+Kidder",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -746,7 +745,7 @@ const books = [
         episode: 23,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Darkness+at+Noon+-+Arthur+Koestler+(1941+version+and+new)",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -756,7 +755,7 @@ const books = [
         episode: 23,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=My+Friend+Sancho+-+Amit+Varma",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -766,7 +765,7 @@ const books = [
         episode: 23,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+World+of+Yesterday+-+Stefan+Zweig",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -776,7 +775,7 @@ const books = [
         episode: 24,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Case+Against+Education+-+Bryan+Caplan",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -786,7 +785,7 @@ const books = [
         episode: 24,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Missionary+Position+-+Christopher+Hitchens",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -796,7 +795,7 @@ const books = [
         episode: 24,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Unelected+Power+-+Paul+Tucker",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -806,7 +805,7 @@ const books = [
         episode: 25,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Essays+on+Nationalism+-+Rabindranath+Tagore",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -816,7 +815,7 @@ const books = [
         episode: 25,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Libertarian+Reader+-+Edited+by+David+Boaz",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -826,7 +825,7 @@ const books = [
         episode: 25,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Origins+of+Political+Order+++Political+Order+and+Political+Decay+Francis+Fukuyama",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -836,7 +835,7 @@ const books = [
         episode: 26,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Cicada+Shaun+Tan",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -846,7 +845,7 @@ const books = [
         episode: 26,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Seeing+like+a+State+James+C.+Scott+✩",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -856,7 +855,7 @@ const books = [
         episode: 27,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=A+History+of+Global+Health+-+Randall+M+Packard",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -866,7 +865,7 @@ const books = [
         episode: 27,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Beggars+in+Spain+-+Nancy.+Kress",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -876,7 +875,7 @@ const books = [
         episode: 29,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=How+Music+Works+-+David+Byrne",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -886,7 +885,7 @@ const books = [
         episode: 29,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=William+Spaniel+",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -896,7 +895,7 @@ const books = [
         episode: 30,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Paper+Menagerie+-+Ken+Liu",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -906,7 +905,7 @@ const books = [
         episode: 30,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=To+Have+or+To+Be+-+Erich+Fromm",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -916,7 +915,7 @@ const books = [
         episode: 31,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Army+and+Nation+-+Steven+&+Wilkinson",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -926,7 +925,7 @@ const books = [
         episode: 31,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Strategy:+A+History+-+Lawrence+Freedman+(he's+on+sub-stack).",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -936,7 +935,7 @@ const books = [
         episode: 31,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Victor+Davis+Hanson+-+The+Second+World+Wars+++Carnage+and+Culture",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -946,7 +945,7 @@ const books = [
         episode: 32,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Cathedral+&+the+Bazaar+-+Eric+S+Raymond",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -956,7 +955,7 @@ const books = [
         episode: 32,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=In+the+Beginning...+Was+the+Command+Line+-+Neal+Stephenson",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -966,7 +965,7 @@ const books = [
         episode: 33,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Constitutional+Amendments+",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -976,7 +975,7 @@ const books = [
         episode: 34,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Father,+Son+&+Co:+My+Life+at+IBM+and+Beyond+Thomas+J+Watson+Jr",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -986,7 +985,7 @@ const books = [
         episode: 34,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Godfather+trilogy+",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -996,7 +995,7 @@ const books = [
         episode: 35,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Heaven's+Gaits+-+Adam+Gopnik",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -1006,7 +1005,7 @@ const books = [
         episode: 35,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Into+the+Wild+-+Jon+Krakauer",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -1016,7 +1015,7 @@ const books = [
         episode: 35,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Man+Eaters+of+Kumaon+-+Jim+Corbett",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -1026,7 +1025,7 @@ const books = [
         episode: 35,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Rumblefish,+The+Outsiders+Francis+Ford+Coppola",
-        isSpecial: false,
+         
         type: "special interest",
         notes: ""
     },
@@ -1036,7 +1035,7 @@ const books = [
         episode: 36,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Runaway,+Hateship,+Friendship,+Courtship,+Loveship,+Marriage,+The+Bear+Came+Over+the+Mountain+-+Alice+Munro",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1046,7 +1045,7 @@ const books = [
         episode: 36,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Weapons+of+the+Weak,+Against+the+Grain+James+C+Scott",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1056,7 +1055,7 @@ const books = [
         episode: 37,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Desperately+Seeking+Shahrukh+-+Shrayana+Bhattacharya",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1066,7 +1065,7 @@ const books = [
         episode: 37,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Discovery+of+India+-+Jawaharlal+Nehru",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1076,7 +1075,7 @@ const books = [
         episode: 39,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Anatomy+of+a+Fall+-+Justine+Triet",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1086,7 +1085,7 @@ const books = [
         episode: 39,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Dead+Poet's+Society+-+Peter+Weir",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1096,7 +1095,7 @@ const books = [
         episode: 40,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Midnight+in+Chernobyl+-+Adam+Higginbotham",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1106,7 +1105,7 @@ const books = [
         episode: 40,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=World+Energy+Outlook+2023+",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1116,7 +1115,7 @@ const books = [
         episode: 41,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=GOAT+-+Tyler+Cowen+(good+starting+point+for+non-+economics+people).",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1126,7 +1125,7 @@ const books = [
         episode: 41,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Marginal+Revolution+University+",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1136,7 +1135,7 @@ const books = [
         episode: 41,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Modern+Principles+of+Microeconomics+-+Alex+Tabarrok+and+Tyler+Cowen",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1146,7 +1145,7 @@ const books = [
         episode: 42,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=1984,+Animal+Farm+-+George+Orwell",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1156,7 +1155,7 @@ const books = [
         episode: 42,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=On+Tyranny+-+Timothy+Snyder+(graphic+version,+to+give+WhatsApp+uncles).",
-        isSpecial: false,
+         
         type: "other",
         notes: ""
     },
@@ -1166,7 +1165,7 @@ const books = [
         episode: 44,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Great+Arc+-+John+Keay",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1176,7 +1175,7 @@ const books = [
         episode: 44,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Thelma+and+Louise+Ridley+Scott",
-        isSpecial: false,
+         
         type: "bir sessions\nmovie",
         notes: ""
     },
@@ -1186,7 +1185,7 @@ const books = [
         episode: 45,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Defending+the+Undefendable+Walter+Block",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1196,7 +1195,7 @@ const books = [
         episode: 45,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Three+Languages+of+Politics+-+Arnold+King",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1206,7 +1205,7 @@ const books = [
         episode: 45,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Why+we+Fight+-+Christopher+Blattman",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1216,7 +1215,7 @@ const books = [
         episode: 47,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Death+and+Life+of+Great+American+Cities+-+Jane+Jacobs",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1226,7 +1225,7 @@ const books = [
         episode: 47,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Triumph+of+the+City+-+Edward+Glaeser",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1236,7 +1235,7 @@ const books = [
         episode: 48,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Research+papers+list+by+Ajay.",
-        isSpecial: false,
+         
         type: "bir sessions\nresearch papers",
         notes: ""
     },
@@ -1246,7 +1245,7 @@ const books = [
         episode: 52,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=How+Life+Imitates+Chess+-+Garry+Kasparov",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1256,7 +1255,7 @@ const books = [
         episode: 51,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Lives+of+Others+-+Florian+Henckel+von+Donnersmarck",
-        isSpecial: false,
+         
         type: "bir sessions",
         notes: ""
     },
@@ -1266,7 +1265,7 @@ const books = [
         episode: 54,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=To+Kill+a+Mocking+Bird+",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1276,7 +1275,7 @@ const books = [
         episode: 54,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Lydia+Davis:+Collected+stories,+Essays",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1286,7 +1285,7 @@ const books = [
         episode: 55,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Odd+Woman+and+the+City+",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1296,7 +1295,7 @@ const books = [
         episode: 55,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Young+Rural+Women+in+India+Chase+Big-City+Dreams+(NYT)",
-        isSpecial: false,
+         
         type: "article / essay\n\nbir sessions",
         notes: ""
     },
@@ -1306,7 +1305,7 @@ const books = [
         episode: 56,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Cathedral+Raymond+Carver",
-        isSpecial: false,
+         
         type: "digital\n\npublic goods\n\nbook",
         notes: ""
     },
@@ -1316,7 +1315,7 @@ const books = [
         episode: 56,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Short+Cuts+(Film+based+on+Raymond+Carver+original+short+stories).",
-        isSpecial: false,
+         
         type: "bir sessions\n\nbook",
         notes: ""
     },
@@ -1326,7 +1325,7 @@ const books = [
         episode: 57,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Lant+Pritchett+-+National+Development+Delivers:+And+How!,+Reforming+Development+Economics",
-        isSpecial: false,
+         
         type: "bir sessions\n\nbook",
         notes: ""
     },
@@ -1336,7 +1335,7 @@ const books = [
         episode: 58,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Horizon+-+Barry+Lopez",
-        isSpecial: false,
+         
         type: "bir sessions\n\nbook",
         notes: ""
     },
@@ -1346,7 +1345,7 @@ const books = [
         episode: 58,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Order+without+Design+-+Alain+Bertaud",
-        isSpecial: false,
+         
         type: "bir sessions\n\nbook",
         notes: ""
     },
@@ -1356,7 +1355,7 @@ const books = [
         episode: 58,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Trek+the+Sahyadris+",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1366,7 +1365,7 @@ const books = [
         episode: 59,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=How+Innovation+Works:+And+Why+It+Flourishes+in+Freedom",
-        isSpecial: false,
+         
         type: "bir sessions\nbook",
         notes: ""
     },
@@ -1376,7 +1375,7 @@ const books = [
         episode: 59,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Huntsville,+Alabama+(to+study).",
-        isSpecial: false,
+         
         type: "bir sessions",
         notes: ""
     },
@@ -1386,7 +1385,7 @@ const books = [
         episode: 60,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=How+To+Know+a+Person+",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1396,7 +1395,7 @@ const books = [
         episode: 60,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=When+McKinsey+Comes+to+Town",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1406,7 +1405,7 @@ const books = [
         episode: 61,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Boltzmann’s+Grave",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1416,7 +1415,7 @@ const books = [
         episode: 62,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Art+of+clear+writing",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1426,7 +1425,7 @@ const books = [
         episode: 62,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Economical+Writing",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1436,7 +1435,7 @@ const books = [
         episode: 64,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=How+China+Escaped+The+Poverty+Trap",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1446,7 +1445,7 @@ const books = [
         episode: 63,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Nightfall+—\u00a0Isaac+Asimov",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1456,7 +1455,7 @@ const books = [
         episode: 63,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=On+the+Natural+History+of+Destruction",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1466,7 +1465,7 @@ const books = [
         episode: 63,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Orienting+-+An+Indian+in+Japan+—\u00a0Pallavi+Aiyar",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1476,7 +1475,7 @@ const books = [
         episode: 64,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=China’s+Gilded+Age",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1486,7 +1485,7 @@ const books = [
         episode: 64,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=When+the+Chips+are+Down",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1496,7 +1495,7 @@ const books = [
         episode: 66,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Prices+Fast+and+Slow+(article)",
-        isSpecial: false,
+         
         type: "article / essay",
         notes: ""
     },
@@ -1506,7 +1505,7 @@ const books = [
         episode: 66,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Slouching+towards+Utopia",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1516,7 +1515,7 @@ const books = [
         episode: 67,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Essays+in+Positive+Economics+—\u00a0Milton+Friedman",
-        isSpecial: false,
+         
         type: "article / essay",
         notes: ""
     },
@@ -1526,7 +1525,7 @@ const books = [
         episode: 67,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Joni+Mitchell+-+Blue",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     },
@@ -1536,7 +1535,7 @@ const books = [
         episode: 67,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Paris,+Texas",
-        isSpecial: false,
+         
         type: "movie",
         notes: ""
     },
@@ -1546,7 +1545,7 @@ const books = [
         episode: 67,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Perfect+Days",
-        isSpecial: false,
+         
         type: "movie",
         notes: ""
     },
@@ -1556,7 +1555,7 @@ const books = [
         episode: 70,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Introduction+to+Human+Behavourial+Biology",
-        isSpecial: false,
+         
         type: "competitive exams",
         notes: ""
     },
@@ -1566,7 +1565,7 @@ const books = [
         episode: 71,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Capital+Ideas:+The+Improbable+Origins+of+Modern+Wall+Street",
-        isSpecial: false,
+         
         type: "book",
         notes: ""
     }
