@@ -1176,7 +1176,7 @@ author: "Raymond Carver",
 episode: 56,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Cathedral+Raymond+Carver",
-tags: ["digital", "public goods", "book", "fiction", "short-stories"],
+tags: ["digital", "public-goods", "book", "fiction", "short-stories"],
 notes: ""
 },
 {
@@ -1185,7 +1185,7 @@ author: "",
 episode: 56,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Short+Cuts+(Film+based+on+Raymond+Carver+original+short+stories).",
-tags: ["bis-sessions", "movie", "film", "short-stories adaptation"],
+tags: ["bis-sessions", "movie", "film", "short-stories-adaptation"],
 notes: ""
 },
 {
@@ -1401,7 +1401,7 @@ author: "",
 episode: 70,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Introduction+to+Human+Behavourial+Biology",
-tags: ["competitive exams", "biology", "behavior"],
+tags: ["competitive-exams", "biology", "behavior"],
 notes: ""
 },
 {
