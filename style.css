@@ -1,101 +1,213 @@
-/* Basic styles for the body and overall layout */
-body {
-    font-family: sans-serif; /* Use a clean, modern sans-serif font */
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4; /* Light grey background */
-    color: #333; /* Dark grey text for readability */
-    display: flex;
-    justify-content: center; /* Center the main container */
-}
-
-.container {
-    width: 100%;
-    max-width: 900px; /* Max width for better readability on large screens */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px;
-}
-
-/* Header styling */
-h1 {
-    text-align: left; /* Left align the main heading */
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Controls styling (for sorting buttons) */
-.controls {
-    margin-bottom: 20px;
-    text-align: left; /* Left align controls */
-}
-
-.controls button {
-    padding: 8px 15px;
-    margin-right: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.controls button:hover {
-    background-color: #e9e9e9;
-}
-
-/* Recommendations list styling (to arrange cards) */
-.recommendations-list {
-    display: grid; /* Use CSS Grid for a responsive card layout */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Auto-fill columns, min width 250px */
-    gap: 20px; /* Space between cards */
-}
-
-/* Individual recommendation card styling */
-.recommendation-card {
-    background-color: #fff; /* White background for cards */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    text-align: left; /* Ensure text is left aligned within cards */
-    transition: transform 0.3s ease; /* Add a subtle hover effect */
-}
-
-.recommendation-card:hover {
-    transform: translateY(-5px); /* Lift card slightly on hover */
-}
-
-.recommendation-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #000; /* Bold title */
-    font-size: 1.2em;
-    font-weight: bold; /* Ensure title is bold */
-}
-
-.recommendation-card p {
-    margin-bottom: 5px;
-    font-size: 0.9em;
-}
-
-.recommendation-card p:last-child {
-    margin-bottom: 0;
-}
-
-.recommendation-card a {
-    color: #007bff; /* A standard link color */
-    text-decoration: none; /* No underline for links */
-}
-
-.recommendation-card a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Style for strong/bold text within paragraphs */
-.recommendation-card p strong {
-    font-weight: bold;
-}
+<style>
+        :root {
+            --primary-color: #333;
+            --bg-color: #fff;
+            --card-bg: #f9f9f9;
+            --border-color: #eaeaea;
+            --accent-color: #0070f3;
+            --special-color: #8a2be2;
+            --book-color: #0070f3;
+            --music-color: #e84118;
+            --film-color: #2ed573;
+            --podcast-color: #ffa502;
+            --other-color: #747d8c;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .sort-controls, .filter-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        select, button {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        button {
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: var(--border-color);
+        }
+        
+        button.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+        
+        #filter-special.active {
+            background-color: var(--special-color);
+            border-color: var(--special-color);
+        }
+        
+        #filter-books.active {
+            background-color: var(--book-color);
+            border-color: var(--book-color);
+        }
+        
+        #filter-media.active {
+            background-color: var(--other-color);
+            border-color: var(--other-color);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-image {
+            height: 200px;
+            background-color: #e0e0e0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-image.no-image::after {
+            content: "No Cover Available";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .card-title.special::before {
+            content: "🪄 ";
+        }
+        
+        .card-author {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-episode {
+            display: inline-block;
+            background-color: var(--border-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .card-type {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+            color: white;
+        }
+        
+        .card-type.book {
+            background-color: var(--book-color);
+        }
+        
+        .card-type.music {
+            background-color: var(--music-color);
+        }
+        
+        .card-type.film {
+            background-color: var(--film-color);
+        }
+        
+        .card-type.podcast {
+            background-color: var(--podcast-color);
+        }
+        
+        .card-type.other {
+            background-color: var(--other-color);
+        }
+        
+        .card-notes {
+            font-style: italic;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
