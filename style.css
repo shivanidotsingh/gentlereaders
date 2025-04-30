@@ -93,7 +93,7 @@ button.active {
     border-color: var(--film-color);
 }
 
-#filter-song.active {
+#filter-music.active {
     background-color: var(--music-color);
     border-color: var(--music-color);
 }
@@ -202,7 +202,7 @@ button.active {
     background-color: var(--book-color); 
 } 
  
-.card-type.song, .card-type.music { 
+.card-type.music { 
     background-color: var(--music-color); 
 } 
  
