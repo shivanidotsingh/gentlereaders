@@ -1,4 +1,5 @@
-// DOM elements
+document.addEventListener('DOMContentLoaded', () => {
+    // DOM elements
     const booksContainer = document.getElementById('books-container');
     const sortTitleBtn = document.getElementById('sort-title');
     const sortEpisodeBtn = document.getElementById('sort-episode');
@@ -183,6 +184,7 @@
         renderBooks(); // Re-render after attempting to load covers
     }
 
-    // Initial render and load covers
+    // Initial render and load covers wrapped in DOMContentLoaded
     renderBooks();
-    loadBookCovers(); // Call to load covers
+    loadBookCovers();
+});
