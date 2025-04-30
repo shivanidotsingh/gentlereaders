@@ -7,14 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // DOM elements for filters
     const filterAllBtn = document.getElementById('filter-all');
-    const filterSpecialBtn = document.getElementById('filter-special');
     const filterBooksBtn = document.getElementById('filter-books');
     const filterMediaBtn = document.getElementById('filter-media');
+    // New Filter Button Elements
+    const filterMovieBtn = document.getElementById('filter-movie');
+    const filterSongBtn = document.getElementById('filter-song');
+    const filterBirSessionsBtn = document.getElementById('filter-bir-sessions');
+    const filterSpecialInterestBtn = document.getElementById('filter-special-interest');
+    const filterArticleEssayBtn = document.getElementById('filter-article-essay');
+
 
     // Current states
     let currentSort = 'title';
     let searchTerm = '';
-    let currentFilter = 'all';
+    let currentFilter = 'all'; // Initial filter state
 
     // Render all books
     function renderBooks() {
@@ -31,18 +37,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Type and Special filters
             let matchesFilter = false; // Start assuming no match
+            const lowerCaseType = book.type.toLowerCase(); // Case-insensitive type checking
 
             if (currentFilter === 'all') {
                 matchesFilter = true;
             } else if (currentFilter === 'special') {
                 matchesFilter = book.isSpecial;
             } else if (currentFilter === 'books') {
-                // Match items whose type includes 'book' but are not special
-                 matchesFilter = book.type.includes('book') && !book.isSpecial;
-            } else if (currentFilter === 'media') {
-                 // Match items whose type includes keywords for various media/other types and are not special
-                 const mediaKeywords = ['movie', 'song', 'bir sessions', 'special interest', 'article', 'essay', 'film', 'music', 'other', 'research papers', 'digital public goods', 'competitive exams']; // Added competitive exams type
-                 matchesFilter = mediaKeywords.some(keyword => book.type.includes(keyword)) && !book.isSpecial;
+                 // Match items whose type includes 'book' but are not special
+                 matchesFilter = lowerCaseType.includes('book') && !book.isSpecial;
+            } else if (currentFilter === 'movie') {
+                 matchesFilter = lowerCaseType.includes('movie') || lowerCaseType.includes('film');
+            } else if (currentFilter === 'song') {
+                 matchesFilter = lowerCaseType.includes('song') || lowerCaseType.includes('music');
+            } else if (currentFilter === 'bir-sessions') {
+                 matchesFilter = lowerCaseType.includes('bir sessions');
+            } else if (currentFilter === 'special-interest') {
+                 matchesFilter = lowerCaseType.includes('special interest');
+            } else if (currentFilter === 'article-essay') {
+                 matchesFilter = lowerCaseType.includes('article') || lowerCaseType.includes('essay');
+            }
+            else if (currentFilter === 'media') {
+                 // The general 'media' filter can include other non-book/non-special types not covered by specific buttons
+                 const specificMediaKeywords = ['movie', 'song', 'bir sessions', 'special interest', 'article', 'essay', 'film', 'music', 'research papers', 'digital public goods', 'competitive exams'];
+                 matchesFilter = !book.isSpecial && !lowerCaseType.includes('book') && !specificMediaKeywords.some(keyword => lowerCaseType.includes(keyword));
+                 // Alternatively, if 'Other Media' should encompass ALL non-special, non-book items:
+                 // matchesFilter = !book.isSpecial && !lowerCaseType.includes('book');
+            }
+
+
+            // Ensure special items are only shown with 'all' or 'special' filter
+            if (book.isSpecial && currentFilter !== 'all' && currentFilter !== 'special') {
+                 matchesFilter = false;
             }
 
             return matchesSearch && matchesFilter;
@@ -129,6 +155,37 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooks();
     });
 
+    // New Filter Button Event Listeners
+    filterMovieBtn.addEventListener('click', () => {
+        currentFilter = 'movie';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+    filterSongBtn.addEventListener('click', () => {
+        currentFilter = 'song';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+    filterBirSessionsBtn.addEventListener('click', () => {
+        currentFilter = 'bir-sessions';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+    filterSpecialInterestBtn.addEventListener('click', () => {
+        currentFilter = 'special-interest';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+    filterArticleEssayBtn.addEventListener('click', () => {
+        currentFilter = 'article-essay';
+        updateFilterButtons();
+        renderBooks();
+    });
+
     filterMediaBtn.addEventListener('click', () => {
         currentFilter = 'media';
         updateFilterButtons();
@@ -151,6 +208,12 @@ document.addEventListener('DOMContentLoaded', () => {
         filterAllBtn.classList.toggle('active', currentFilter === 'all');
         filterSpecialBtn.classList.toggle('active', currentFilter === 'special');
         filterBooksBtn.classList.toggle('active', currentFilter === 'books');
+        // Update active state for new filter buttons
+        filterMovieBtn.classList.toggle('active', currentFilter === 'movie');
+        filterSongBtn.classList.toggle('active', currentFilter === 'song');
+        filterBirSessionsBtn.classList.toggle('active', currentFilter === 'bir-sessions');
+        filterSpecialInterestBtn.classList.toggle('active', currentFilter === 'special-interest');
+        filterArticleEssayBtn.classList.toggle('active', currentFilter === 'article-essay');
         filterMediaBtn.classList.toggle('active', currentFilter === 'media');
     }
 
@@ -173,16 +236,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to load book covers if not already set
     async function loadBookCovers() {
+        // Note: This will re-render *all* books after each cover is potentially loaded.
+        // For a large dataset, you might optimize this to update individual cards.
+        let coversLoaded = false;
         for (let book of books) {
-            if (book.coverUrl === "/api/placeholder/280/200") {
+            if (book.coverUrl === "/api/placeholder/280/200" && book.title && book.author) { // Check if title and author exist
                 const coverUrl = await fetchBookCover(book.title, book.author);
                 if (coverUrl) {
                     book.coverUrl = coverUrl;
+                    coversLoaded = true;
                 }
             }
         }
-        renderBooks(); // Re-render after attempting to load covers
+        if (coversLoaded) {
+             renderBooks(); // Re-render only if any covers were updated
+        }
     }
+
 
     // Initial render and load covers wrapped in DOMContentLoaded
     renderBooks();
