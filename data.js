@@ -321,7 +321,7 @@ const books = [
         episode: 9,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Barack+Obama+-+David+Remnick",
-        tags: ["special interest", "biography"],
+        tags: ["special-interest", "biography"],
         notes: ""
     },
     {
@@ -339,7 +339,7 @@ const books = [
         episode: 9,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=FreeStyle+Libre+Glucose+Monitoring+System+(Reader+&+Sensor)+",
-        tags: ["special interest", "technology"],
+        tags: ["special-interest", "technology"],
         notes: ""
     },
     {
@@ -582,7 +582,7 @@ const books = [
         episode: 19,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Superforecasting:+The+Art+and+Science+of+Prediction+-+Philip+Tetlock+&+Dan+Gardner",
-        tags: ["special interest", "psychology", "forecasting"],
+        tags: ["special-interest", "psychology", "forecasting"],
         notes: ""
     },
     {
@@ -591,7 +591,7 @@ const books = [
         episode: 19,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Thinking+Strategically:+The+Competitive+Edge+in+Business,+Politics,+and+Everyday+Life+-+Avinash+Dixit+&+Barry+Nalebuff",
-        tags: ["special interest", "strategy", "game theory"],
+        tags: ["special-interest", "strategy", "game theory"],
         notes: ""
     },
     {
@@ -672,7 +672,7 @@ const books = [
         episode: 23,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Darkness+at+Noon+-+Arthur+Koestler+(1941+version+and+new)",
-        tags: ["special interest", "fiction", "politics"],
+        tags: ["special-interest", "fiction", "politics"],
         notes: ""
     },
     {
@@ -681,7 +681,7 @@ const books = [
         episode: 23,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=My+Friend+Sancho+-+Amit+Varma",
-        tags: ["special interest", "fiction", "indian literature"],
+        tags: ["special-interest", "fiction", "indian-literature"],
         notes: ""
     },
     {
@@ -690,7 +690,7 @@ const books = [
         episode: 23,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+World+of+Yesterday+-+Stefan+Zweig",
-        tags: ["special interest", "memoir", "history"],
+        tags: ["special-interest", "memoir", "history"],
         notes: ""
     },
     {
@@ -753,7 +753,7 @@ const books = [
         episode: 26,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Cicada+Shaun+Tan",
-        tags: ["book", "picture book"],
+        tags: ["book", "picture-book"],
         notes: ""
     },
     {
@@ -807,7 +807,7 @@ const books = [
         episode: 30,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Paper+Menagerie+-+Ken+Liu",
-        tags: ["special interest", "fiction", "short stories"],
+        tags: ["special-interest", "fiction", "short-stories"],
         notes: ""
     },
     {
@@ -816,7 +816,7 @@ const books = [
         episode: 30,
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=To+Have+or+To+Be+-+Erich+Fromm",
-        tags: ["special interest", "philosophy", "psychology"],
+        tags: ["special-interest", "philosophy", "psychology"],
         notes: ""
     },
     {
@@ -897,7 +897,7 @@ const books = [
 episode: 35,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Heaven's+Gaits+-+Adam+Gopnik",
-tags: ["special interest", "essays", "culture"],
+tags: ["special-interest", "essays", "culture"],
 notes: ""
 },
 {
@@ -906,7 +906,7 @@ author: "Jon Krakauer",
 episode: 35,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Into+the+Wild+-+Jon+Krakauer",
-tags: ["special interest", "book", "non-fiction"],
+tags: ["special-interest", "book", "non-fiction"],
 notes: ""
 },
 {
@@ -915,7 +915,7 @@ author: "Jim Corbett",
 episode: 35,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Man+Eaters+of+Kumaon+-+Jim+Corbett",
-tags: ["special interest", "book", "adventure"],
+tags: ["special-interest", "book", "adventure"],
 notes: ""
 },
 {
@@ -924,7 +924,7 @@ author: "Francis Ford Coppola",
 episode: 35,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Rumblefish,+The+Outsiders+Francis+Ford+Coppola",
-tags: ["special interest", "movie", "film"],
+tags: ["special-interest", "movie", "film"],
 notes: ""
 },
 {
@@ -933,7 +933,7 @@ author: "Alice Munro",
 episode: 36,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Runaway,+Hateship,+Friendship,+Courtship,+Loveship,+Marriage,+The+Bear+Came+Over+the+Mountain+-+Alice+Munro",
-tags: ["book", "fiction", "short stories"],
+tags: ["book", "fiction", "short-stories"],
 notes: ""
 },
 {
@@ -1050,7 +1050,7 @@ author: "John Keay",
 episode: 44,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Great+Arc+-+John+Keay",
-tags: ["bir sessions", "book", "history"],
+tags: ["bis-sessions", "book", "history"],
 notes: ""
 },
 {
@@ -1059,7 +1059,7 @@ author: "Ridley Scott",
 episode: 44,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Thelma+and+Louise+Ridley+Scott",
-tags: ["bir sessions", "movie", "film"],
+tags: ["bis-sessions", "movie", "film"],
 notes: ""
 },
 {
@@ -1068,7 +1068,7 @@ author: "Walter Block",
 episode: 45,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Defending+the+Undefendable+Walter+Block",
-tags: ["bir sessions", "book", "economics", "philosophy"],
+tags: ["bis-sessions", "book", "economics", "philosophy"],
 notes: ""
 },
 {
@@ -1077,7 +1077,7 @@ author: "Arnold King",
 episode: 45,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Three+Languages+of+Politics+-+Arnold+King",
-tags: ["bir sessions", "book", "politics"],
+tags: ["bis-sessions", "book", "politics"],
 notes: ""
 },
 {
@@ -1086,7 +1086,7 @@ author: "Christopher Blattman",
 episode: 45,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Why+we+Fight+-+Christopher+Blattman",
-tags: ["bir sessions", "book", "politics", "conflict"],
+tags: ["bis-sessions", "book", "politics", "conflict"],
 notes: ""
 },
 {
@@ -1095,7 +1095,7 @@ author: "Jane Jacobs",
 episode: 47,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Death+and+Life+of+Great+American+Cities+-+Jane+Jacobs",
-tags: ["bir sessions", "book", "urbanism", "sociology"],
+tags: ["bis-sessions", "book", "urbanism", "sociology"],
 notes: ""
 },
 {
@@ -1104,7 +1104,7 @@ author: "Edward Glaeser",
 episode: 47,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Triumph+of+the+City+-+Edward+Glaeser",
-tags: ["bir sessions", "book", "urbanism", "economics"],
+tags: ["bis-sessions", "book", "urbanism", "economics"],
 notes: ""
 },
 {
@@ -1113,7 +1113,7 @@ author: "",
 episode: 48,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Research+papers+list+by+Ajay.",
-tags: ["bir sessions", "research papers"],
+tags: ["bis-sessions", "research papers"],
 notes: ""
 },
 {
@@ -1122,7 +1122,7 @@ author: "Garry Kasparov",
 episode: 52,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=How+Life+Imitates+Chess+-+Garry+Kasparov",
-tags: ["bir sessions", "book", "strategy", "chess"],
+tags: ["bis-sessions", "book", "strategy", "chess"],
 notes: ""
 },
 {
@@ -1131,7 +1131,7 @@ author: "Florian Henckel von Donnersmarck",
 episode: 51,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Lives+of+Others+-+Florian+Henckel+von+Donnersmarck",
-tags: ["bir sessions", "movie", "film"],
+tags: ["bis-sessions", "movie", "film"],
 notes: ""
 },
 {
@@ -1140,7 +1140,7 @@ author: "",
 episode: 54,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=To+Kill+a+Mocking+Bird+",
-tags: ["bir sessions", "book", "fiction"],
+tags: ["bis-sessions", "book", "fiction"],
 notes: ""
 },
 {
@@ -1149,7 +1149,7 @@ author: "",
 episode: 54,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Lydia+Davis:+Collected+stories,+Essays",
-tags: ["bir sessions", "book", "short stories", "essays"],
+tags: ["bis-sessions", "book", "short-stories", "essays"],
 notes: ""
 },
 {
@@ -1158,7 +1158,7 @@ author: "",
 episode: 55,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=The+Odd+Woman+and+the+City+",
-tags: ["bir sessions", "book", "memoir", "essays"],
+tags: ["bis-sessions", "book", "memoir", "essays"],
 notes: ""
 },
 {
@@ -1167,7 +1167,7 @@ author: "",
 episode: 55,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Young+Rural+Women+in+India+Chase+Big-City+Dreams+(NYT)",
-tags: ["bir sessions", "article", "essay", "sociology"],
+tags: ["bis-sessions", "article", "essay", "sociology"],
 notes: ""
 },
 {
@@ -1176,16 +1176,16 @@ author: "Raymond Carver",
 episode: 56,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Cathedral+Raymond+Carver",
-tags: ["digital", "public goods", "book", "fiction", "short stories"],
+tags: ["digital", "public goods", "book", "fiction", "short-stories"],
 notes: ""
 },
 {
-title: "Short Cuts (Film based on Raymond Carver original short stories).",
+title: "Short Cuts (Film based on Raymond Carver original short-stories).",
 author: "",
 episode: 56,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Short+Cuts+(Film+based+on+Raymond+Carver+original+short+stories).",
-tags: ["bir sessions", "movie", "film", "short stories adaptation"],
+tags: ["bis-sessions", "movie", "film", "short-stories adaptation"],
 notes: ""
 },
 {
@@ -1194,7 +1194,7 @@ author: "",
 episode: 57,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Lant+Pritchett+-+National+Development+Delivers:+And+How!,+Reforming+Development+Economics",
-tags: ["bir sessions", "book", "economics", "development"],
+tags: ["bis-sessions", "book", "economics", "development"],
 notes: ""
 },
 {
@@ -1203,7 +1203,7 @@ author: "Barry Lopez",
 episode: 58,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Horizon+-+Barry+Lopez",
-tags: ["bir sessions", "book", "nature", "essays"],
+tags: ["bis-sessions", "book", "nature", "essays"],
 notes: ""
 },
 {
@@ -1212,7 +1212,7 @@ author: "Alain Bertaud",
 episode: 58,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Order+without+Design+-+Alain+Bertaud",
-tags: ["bir sessions", "book", "urbanism", "economics"],
+tags: ["bis-sessions", "book", "urbanism", "economics"],
 notes: ""
 },
 {
@@ -1221,7 +1221,7 @@ author: "",
 episode: 58,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Trek+the+Sahyadris+",
-tags: ["bir sessions", "travel", "guide"],
+tags: ["bis-sessions", "travel", "guide"],
 notes: ""
 },
 {
@@ -1230,7 +1230,7 @@ author: "",
 episode: 59,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=How+Innovation+Works:+And+Why+It+Flourishes+in+Freedom",
-tags: ["bir sessions", "book", "innovation", "economics"],
+tags: ["bis-sessions", "book", "innovation", "economics"],
 notes: ""
 },
 {
@@ -1239,7 +1239,7 @@ author: "",
 episode: 59,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Huntsville,+Alabama+(to+study).",
-tags: ["bir sessions", "place", "study"],
+tags: ["bis-sessions", "place", "study"],
 notes: ""
 },
 {
