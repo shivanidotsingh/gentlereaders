@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // DOM elements for filters
     const filterAllBtn = document.getElementById('filter-all');
+    // Removed the filterSpecialBtn as per previous discussion
     const filterBooksBtn = document.getElementById('filter-books');
     const filterMediaBtn = document.getElementById('filter-media');
     // New Filter Button Elements
     const filterMovieBtn = document.getElementById('filter-movie');
-    const filterSongBtn = document.getElementById('filter-song');
+    const filterMusicBtn = document.getElementById('filter-music'); // Renamed from song
     const filterBirSessionsBtn = document.getElementById('filter-bir-sessions');
     const filterSpecialInterestBtn = document.getElementById('filter-special-interest');
     const filterArticleEssayBtn = document.getElementById('filter-article-essay');
@@ -35,41 +36,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 book.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 (book.notes && book.notes.toLowerCase().includes(searchTerm.toLowerCase())); // Include notes in search
 
-            // Type and Special filters
+            // Tag filtering
             let matchesFilter = false; // Start assuming no match
-            const lowerCaseType = book.type.toLowerCase(); // Case-insensitive type checking
+            // Convert tags to lowercase for case-insensitive matching
+            const tags = book.tags || []; // Ensure tags is an array, even if missing
+            const lowerCaseTags = tags.map(tag => tag.toLowerCase());
+
 
             if (currentFilter === 'all') {
                 matchesFilter = true;
-            } else if (currentFilter === 'special') {
-                matchesFilter = book.isSpecial;
-            } else if (currentFilter === 'books') {
-                 // Match items whose type includes 'book' but are not special
-                 matchesFilter = lowerCaseType.includes('book') && !book.isSpecial;
-            } else if (currentFilter === 'movie') {
-                 matchesFilter = lowerCaseType.includes('movie') || lowerCaseType.includes('film');
-            } else if (currentFilter === 'song') {
-                 matchesFilter = lowerCaseType.includes('song') || lowerCaseType.includes('music');
+            }
+            // Removed 'special' filter case
+            else if (currentFilter === 'books') {
+                 matchesFilter = lowerCaseTags.includes('book'); // Check if 'book' tag exists
+            }
+            // Filtering logic for kebab-case and individual tags
+            else if (currentFilter === 'movie') {
+                 matchesFilter = lowerCaseTags.includes('movie') || lowerCaseTags.includes('film'); // Still check for both if applicable
+            }
+            else if (currentFilter === 'music') {
+                 matchesFilter = lowerCaseTags.includes('music'); // Check for 'music' tag
             } else if (currentFilter === 'bir-sessions') {
-                 matchesFilter = lowerCaseType.includes('bir sessions');
+                 matchesFilter = lowerCaseTags.includes('bir-sessions'); // Check for 'bir-sessions' tag
             } else if (currentFilter === 'special-interest') {
-                 matchesFilter = lowerCaseType.includes('special interest');
-            } else if (currentFilter === 'article-essay') {
-                 matchesFilter = lowerCaseType.includes('article') || lowerCaseType.includes('essay');
+                 matchesFilter = lowerCaseTags.includes('special-interest'); // Check for 'special-interest' tag
+            }
+            // Updated filtering logic for 'article-essay' to check for 'article' OR 'essay'
+            else if (currentFilter === 'article-essay') {
+                 matchesFilter = lowerCaseTags.includes('article') || lowerCaseTags.includes('essay'); // Check for 'article' OR 'essay'
             }
             else if (currentFilter === 'media') {
-                 // The general 'media' filter can include other non-book/non-special types not covered by specific buttons
-                 const specificMediaKeywords = ['movie', 'song', 'bir sessions', 'special interest', 'article', 'essay', 'film', 'music', 'research papers', 'digital public goods', 'competitive exams'];
-                 matchesFilter = !book.isSpecial && !lowerCaseType.includes('book') && !specificMediaKeywords.some(keyword => lowerCaseType.includes(keyword));
-                 // Alternatively, if 'Other Media' should encompass ALL non-special, non-book items:
-                 // matchesFilter = !book.isSpecial && !lowerCaseType.includes('book');
+                 // This filter shows items that are NOT 'book' and don't match the specific filters
+                 const specificTags = ['book', 'movie', 'film', 'music', 'bir-sessions', 'special-interest', 'article', 'essay']; // Include all specific filter tags (removed 'article-essay')
+                 matchesFilter = !specificTags.some(tag => lowerCaseTags.includes(tag));
             }
 
-
-            // Ensure special items are only shown with 'all' or 'special' filter
-            if (book.isSpecial && currentFilter !== 'all' && currentFilter !== 'special') {
-                 matchesFilter = false;
-            }
+            // With no 'special' tag, no need for the isSpecial check here
 
             return matchesSearch && matchesFilter;
         });
@@ -93,21 +95,25 @@ document.addEventListener('DOMContentLoaded', () => {
             card.href = book.googleBooksUrl;
             card.target = '_blank';
 
-            // Prepare type label - use the raw type string for display
-            const typeLabel = book.type.split('\n').map(part => part.trim()).filter(part => part).join(' / '); // Handle multiline types
+            // Prepare tags for display
+            // Display original tags, not necessarily lowercase or kebab-case
+            const tagsLabel = (book.tags || []).join(' / '); // Join tags with ' / ' for display
+
 
             // Determine card-image class based on coverUrl
              const cardImageClass = book.coverUrl && book.coverUrl !== "/api/placeholder/280/200" ? '' : 'no-image';
+
+            // Removed check for 'special' tag for title styling
 
 
             // Create card HTML with fallback for image loading errors
             card.innerHTML = `
                 <div class="card-image ${cardImageClass}" style="background-image: url('${book.coverUrl}')" onerror="this.classList.add('no-image'); this.style.backgroundImage='none';"></div>
                 <div class="card-content">
-                    <h3 class="card-title ${book.isSpecial ? 'special' : ''}">${book.title}</h3>
+                    <h3 class="card-title">${book.title}</h3>
                     <div class="card-author">${book.author}</div>
                     <div class="card-badges">
-                        <span class="card-type ${book.type.split('\n')[0].trim().toLowerCase()}">${typeLabel}</span>
+                        <span class="card-type">${tagsLabel}</span>
                         <span class="card-episode">Episode ${book.episode}</span>
                     </div>
                     ${book.notes ? `<div class="card-notes">${book.notes}</div>` : ''}
@@ -143,11 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooks();
     });
 
-    filterSpecialBtn.addEventListener('click', () => {
-        currentFilter = 'special';
-        updateFilterButtons();
-        renderBooks();
-    });
+    // Removed event listener for filterSpecialBtn
 
     filterBooksBtn.addEventListener('click', () => {
         currentFilter = 'books';
@@ -155,15 +157,14 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooks();
     });
 
-    // New Filter Button Event Listeners
     filterMovieBtn.addEventListener('click', () => {
         currentFilter = 'movie';
         updateFilterButtons();
         renderBooks();
     });
 
-    filterSongBtn.addEventListener('click', () => {
-        currentFilter = 'song';
+    filterMusicBtn.addEventListener('click', () => {
+        currentFilter = 'music';
         updateFilterButtons();
         renderBooks();
     });
@@ -186,11 +187,12 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooks();
     });
 
-    filterMediaBtn.addEventListener('click', () => {
+     filterMediaBtn.addEventListener('click', () => {
         currentFilter = 'media';
         updateFilterButtons();
         renderBooks();
     });
+
 
     // Search functionality
     searchInput.addEventListener('input', (e) => {
@@ -206,11 +208,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateFilterButtons() {
         filterAllBtn.classList.toggle('active', currentFilter === 'all');
-        filterSpecialBtn.classList.toggle('active', currentFilter === 'special');
+        // Removed active state toggle for filterSpecialBtn
         filterBooksBtn.classList.toggle('active', currentFilter === 'books');
-        // Update active state for new filter buttons
         filterMovieBtn.classList.toggle('active', currentFilter === 'movie');
-        filterSongBtn.classList.toggle('active', currentFilter === 'song');
+        filterMusicBtn.classList.toggle('active', currentFilter === 'music');
         filterBirSessionsBtn.classList.toggle('active', currentFilter === 'bir-sessions');
         filterSpecialInterestBtn.classList.toggle('active', currentFilter === 'special-interest');
         filterArticleEssayBtn.classList.toggle('active', currentFilter === 'article-essay');
@@ -236,8 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to load book covers if not already set
     async function loadBookCovers() {
-        // Note: This will re-render *all* books after each cover is potentially loaded.
-        // For a large dataset, you might optimize this to update individual cards.
         let coversLoaded = false;
         for (let book of books) {
             if (book.coverUrl === "/api/placeholder/280/200" && book.title && book.author) { // Check if title and author exist
