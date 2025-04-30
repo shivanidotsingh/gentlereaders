@@ -1,0 +1,175 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-buttons,
+.sort-buttons,
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #e9e9e9; /* Placeholder background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+}
+
+.card-image.no-image {
+     background-image: none !important;
+     content: 'No Image Available'; /* Text for no image */
+     display: flex; /* Ensure flex properties for centering */
+     align-items: center;
+     justify-content: center;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #0056b3;
+}
+
+.card-title.special {
+    color: #ff5722; /* Highlight color for special items */
+}
+
+.card-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.card-type,
+.card-episode {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: white;
+}
+
+.card-type {
+    background-color: #28a745; /* Default type color */
+}
+
+/* Specific colors for different types */
+.book { background-color: #007bff; }
+.music { background-color: #ffc107; }
+.film { background-color: #6610f2; }
+.special interest { background-color: #fd7e14; }
+.article \/ essay { background-color: #20c997; }
+.bir sessions { background-color: #17a2b8; }
+.other { background-color: #6c757d; }
+.research papers { background-color: #e83e8c; }
+.digital { background-color: #6f42c1; }
+.public goods { background-color: #dc3545; }
+.competitive exams { background-color: #343a40; }
+
+
+.card-episode {
+    background-color: #6c757d;
+}
+
+.card-notes {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+}
