@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // DOM elements for filters
     const filterAllBtn = document.getElementById('filter-all');
-    // Removed the filterSpecialBtn
     const filterBooksBtn = document.getElementById('filter-books');
     const filterMediaBtn = document.getElementById('filter-media');
     // Filter Button Elements
     const filterMovieBtn = document.getElementById('filter-movie');
-    const filterMusicBtn = documentgetElementById('filter-music'); // Renamed from song
+    const filterMusicBtn = document.getElementById('filter-music'); // Renamed from song
     const filterBirSessionsBtn = document.getElementById('filter-bir-sessions');
     const filterSpecialInterestBtn = document.getElementById('filter-special-interest');
     const filterArticleEssayBtn = document.getElementById('filter-article-essay');
@@ -44,39 +43,38 @@ document.addEventListener('DOMContentLoaded', () => {
             // Tag filtering
             let matchesFilter = false; // Start assuming no match
             const tags = book.tags || []; // Ensure tags is an array, even if missing
-            // No need to lowercase here, filtering checks will handle it
+            const lowerCaseTags = tags.map(tag => tag.toLowerCase());
 
 
             if (currentFilter === 'all') {
                 matchesFilter = true;
             }
-            // Removed 'special' filter case
             else if (currentFilter === 'books') {
-                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('book'); // Check if 'book' tag exists
+                 matchesFilter = lowerCaseTags.includes('book'); // Check if 'book' tag exists
             }
             // Filtering logic for specific tags
             else if (currentFilter === 'movie') {
-                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('movie') || tags.map(tag => tag.toLowerCase()).includes('film'); // Include both 'movie' and 'film'
+                 matchesFilter = lowerCaseTags.includes('movie') || lowerCaseTags.includes('film'); // Include both 'movie' and 'film'
             }
             else if (currentFilter === 'music') {
-                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('music'); // Check for 'music' tag
+                 matchesFilter = lowerCaseTags.includes('music'); // Check for 'music' tag
             } else if (currentFilter === 'bir-sessions') {
-                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('bir-sessions'); // Check for 'bir-sessions' tag
+                 matchesFilter = lowerCaseTags.includes('bir-sessions'); // Check for 'bir-sessions' tag
             } else if (currentFilter === 'special-interest') {
-                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('special-interest'); // Check for 'special-interest' tag
+                 matchesFilter = lowerCaseTags.includes('special-interest'); // Check for 'special-interest' tag
             }
             // Filtering logic for 'article-essay' to check for 'article' OR 'essay'
             else if (currentFilter === 'article-essay') {
-                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('article') || tags.map(tag => tag.toLowerCase()).includes('essay'); // Check for 'article' OR 'essay'
+                 matchesFilter = lowerCaseTags.includes('article') || lowerCaseTags.includes('essay'); // Check for 'article' OR 'essay'
             }
             else if (currentFilter === 'media') {
                  // This filter shows items that are NOT 'book' and don't match the specific filters
                  const specificTags = ['book', 'movie', 'film', 'music', 'bir-sessions', 'special-interest', 'article', 'essay']; // Include all specific filter tags
                  // Check if the item has ANY of the specific tags. If it does, it's NOT 'media' in this context.
                  const hasSpecificTag = specificTags.some(specificTag =>
-                      tags.map(tag => tag.toLowerCase()).includes(specificTag)
+                      lowerCaseTags.includes(specificTag)
                  );
-                 matchesFilter = !tags.map(tag => tag.toLowerCase()).includes('book') && !hasSpecificTag;
+                 matchesFilter = !lowerCaseTags.includes('book') && !hasSpecificTag;
             }
 
             return matchesSearch && matchesFilter;
@@ -90,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                  // Handle non-numeric episode values for sorting
                  const episodeA = typeof a.episode === 'number' ? a.episode : Infinity;
                  const episodeB = typeof b.episode === 'number' ? b.episode : Infinity;
-                 return episodeA - episodeB;
+                 return episodeB - episodeA; // Assuming descending order for episodes usually
             }
         });
 
@@ -111,9 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Determine card-image class based on coverUrl
              const cardImageClass = book.coverUrl && book.coverUrl !== "/api/placeholder/280/200" ? '' : 'no-image';
-
-
-            // Removed check for 'special' tag for title styling
 
 
             // Create card HTML with fallback for image loading errors
@@ -224,10 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
         filterMediaBtn.classList.toggle('active', currentFilter === 'media');
     }
 
-    // Function to fetch book cover from Open Library API
+    // Function to fetch book cover from APIs (Open Library then Google Books)
     async function fetchBookCover(title, author) {
+        // 1. Try Open Library API (Requesting Large size, fallback to Medium)
         try {
-            // Construct the search query for Open Library
             const query = encodeURIComponent(`${title} by ${author}`);
             const searchUrl = `https://openlibrary.org/search.json?q=${query}&limit=1`;
 
@@ -236,16 +231,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (searchData.docs && searchData.docs.length > 0 && searchData.docs[0].cover_i) {
                 const coverId = searchData.docs[0].cover_i;
-                // Construct the cover image URL using the Covers API (M for medium size)
-                const coverUrl = `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`;
+                // Try Large size ('L') first
+                let coverUrl = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`;
+                console.log(`Attempting to fetch Large cover for "${title}" from Open Library.`);
+                 const imgResponse = await fetch(coverUrl);
+
+                 if (imgResponse.ok) {
+                     console.log(`Found Large cover for "${title}" on Open Library.`);
+                     return coverUrl;
+                 } else {
+                     console.log(`Large cover not available for "${title}", trying Medium.`);
+                     // If large fails, try Medium size ('M')
+                     coverUrl = `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`;
+                     const mediumImgResponse = await fetch(coverUrl);
+                     if(mediumImgResponse.ok) {
+                         console.log(`Found Medium cover for "${title}" on Open Library.`);
+                         return coverUrl;
+                     }
+                 }
+            }
+        } catch (error) {
+            console.error('Error fetching from Open Library:', error);
+            // Continue to Google Books if Open Library fails or no cover found
+        }
+
+        // 2. If Open Library failed or found no cover, try Google Books API (Thumbnail size)
+        try {
+            const query = encodeURIComponent(`${title} ${author}`);
+            const googleBooksUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
+            const googleBooksResponse = await fetch(googleBooksUrl);
+            const googleBooksData = await googleBooksResponse.json();
+
+            if (googleBooksData.items && googleBooksData.items[0].volumeInfo && googleBooksData.items[0].volumeInfo.imageLinks && googleBooksData.items[0].volumeInfo.imageLinks.thumbnail) {
+                const coverUrl = googleBooksData.items[0].volumeInfo.imageLinks.thumbnail;
+                 console.log(`Found cover for "${title}" on Google Books (Thumbnail).`);
                 return coverUrl;
             }
-
-            return null; // No cover found
         } catch (error) {
-            console.error('Error fetching book cover from Open Library:', error);
-            return null;
+            console.error('Error fetching from Google Books:', error);
+            // Continue to return null if Google Books also fails
         }
+
+        console.log(`No cover found for "${title}" on either API.`);
+        return null; // Return null if neither API found a cover
     }
 
     // Function to load book covers if not already set
