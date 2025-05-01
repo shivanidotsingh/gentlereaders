@@ -196,6 +196,7 @@ button.active {
     margin-top: 0.5rem; 
     margin-right: 0.5rem; 
     color: white; 
+    background-color: #A7BBC3;
 } 
  
 .card-type.book { 
