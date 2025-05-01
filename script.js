@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                  // Handle non-numeric episode values for sorting
                  const episodeA = typeof a.episode === 'number' ? a.episode : Infinity;
                  const episodeB = typeof b.episode === 'number' ? b.episode : Infinity;
-                 return episodeB - episodeA; // Assuming descending order for episodes usually
+                 return episodeB - episodeA; // Descending order for episodes
             }
         });
 
@@ -107,12 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `<span class="card-type ${className}">${tag}</span>`;
             }).join(''); // Join the spans together
 
-            // Prepare episode info HTML (format: Number. Title)
+            // Prepare episode info HTML (format: Number. Title) in a styled tag-like format
             // Only create this div if episode or episodeTitle exists
             let episodeInfoDiv = '';
             if (book.episode || book.episodeTitle) { // Check if either exists
                  const episodeDisplay = `${book.episode || ''}${book.episode ? '.' : ''} ${book.episodeTitle || ''}`;
-                 episodeInfoDiv = `<div class="card-episode-info">${episodeDisplay.trim()}</div>`; // Trim handles cases where episode/title is missing
+                 episodeInfoDiv = `<div class="card-episode-container"><span class="card-episode-tag">${episodeDisplay.trim()}</span></div>`; // Trim handles cases where episode/title is missing
             }
 
 
@@ -126,10 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-content">
                     <h3 class="card-title">${book.title}</h3>
                     <div class="card-author">${book.author}</div>
+                    ${episodeInfoDiv}
                     <div class="card-badges">
                         ${tagsHtml} </div>
                     ${book.notes ? `<div class="card-notes">${book.notes}</div>` : ''}
-                    ${episodeInfoDiv} </div>
+                </div>
             `;
 
             booksContainer.appendChild(card);
@@ -303,8 +304,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // Initial render and load covers wrapped in DOMContentLoaded
+    // Initialize the UI state for buttons
+    updateSortButtons();   // THIS LINE IS ADDED - Apply initial active state
+    updateFilterButtons(); // THIS LINE IS ADDED - Apply initial active state 
+
+    // Initial render and load covers
     renderBooks();
     loadBookCovers();
 });
-
