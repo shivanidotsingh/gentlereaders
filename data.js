@@ -1174,8 +1174,8 @@ const books = [
         author: "Ridley Scott",
         episode: 44,
         episodeTitle: "Maps are Magic",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Thelma+and+Louise+Ridley+Scott",
+        coverUrl: "https://a.ltrbxd.com/resized/sm/upload/wt/r4/hc/iz/pnzuLoE52EiTfjfqRex2uTkH7LB-0-2000-0-3000-crop.jpg?v=5c24b21874",
+        googleBooksUrl: "https://letterboxd.com/film/thelma-louise/",
         tags: ["bir-sessions", "movie"  ],
         notes: ""
     },
@@ -1194,7 +1194,7 @@ const books = [
         author: "Arnold King",
         episode: 45,
         episodeTitle: "Fallacies! and Luxury Beliefs",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1649855141i/60805986.jpg",
         googleBooksUrl: "https://books.google.com/books?q=The+Three+Languages+of+Politics+-+Arnold+King",
         tags: ["bir-sessions", "book", "politics"],
         notes: ""
@@ -1204,7 +1204,7 @@ const books = [
         author: "Christopher Blattman",
         episode: 45,
         episodeTitle: "Fallacies! and Luxury Beliefs",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://cdn2.penguin.com.au/covers/original/9780241989258.jpg",
         googleBooksUrl: "https://books.google.com/books?q=Why+we+Fight+-+Christopher+Blattman",
         tags: ["bir-sessions", "book", "politics", "conflict"],
         notes: ""
@@ -1214,7 +1214,7 @@ const books = [
         author: "Jane Jacobs",
         episode: 47,
         episodeTitle: "India needs Decentralization",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/commons/2/21/DeathAndLife.JPG",
         googleBooksUrl: "https://books.google.com/books?q=The+Death+and+Life+of+Great+American+Cities+-+Jane+Jacobs",
         tags: ["bir-sessions", "book", "urbanism", "sociology"],
         notes: ""
@@ -1224,7 +1224,7 @@ const books = [
         author: "Edward Glaeser",
         episode: 47,
         episodeTitle: "India needs Decentralization",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/en/b/b5/Book_cover_of_Triumph_of_the_City.jpg",
         googleBooksUrl: "https://books.google.com/books?q=Triumph+of+the+City+-+Edward+Glaeser",
         tags: ["bir-sessions", "book", "urbanism", "economics"],
         notes: ""
@@ -1254,8 +1254,8 @@ const books = [
         author: "Florian Henckel von Donnersmarck",
         episode: 51,
         episodeTitle: "Lines on Maps",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=The+Lives+of+Others+-+Florian+Henckel+von+Donnersmarck",
+        coverUrl: "https://a.ltrbxd.com/resized/sm/upload/8b/y5/ap/l6/bzzDAg3fkztvfQB08VBprhs9tVE-0-2000-0-3000-crop.jpg?v=803117c2ab",
+        googleBooksUrl: "https://letterboxd.com/film/the-lives-of-others/",
         tags: ["bir-sessions", "movie"  ],
         notes: ""
     },
@@ -1291,7 +1291,7 @@ const books = [
     },
     {
         title: "Young Rural Women in India Chase Big-City Dreams (NYT)",
-        author: "",
+        author: "Ellen Barry",
         episode: 55,
         episodeTitle: "Infrastructure",
         coverUrl: "https://static01.nyt.com/images/2016/09/24/world/asia/India-slide-TRGD/India-slide-TRGD-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
@@ -1310,22 +1310,22 @@ const books = [
         notes: ""
     },
     {
-        title: "Short Cuts (Film based on Raymond Carver original short-stories).",
-        author: "",
+        title: "Short Cuts",
+        author: "Robert Altman",
         episode: 56,
         episodeTitle: "Digital Public Goods",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Short+Cuts+(Film+based+on+Raymond+Carver+original+short+stories).",
+        coverUrl: "https://a.ltrbxd.com/resized/sm/upload/zj/px/uu/2s/1uLswfkvy6WzjvGfw35Y7jKjxdB-0-2000-0-3000-crop.jpg?v=87ce94914d",
+        googleBooksUrl: "https://letterboxd.com/film/short-cuts/",
         tags: ["bir-sessions", "movie", "short-stories-adaptation"],
-        notes: ""
+        notes: "Film based on Raymond Carver original short-stories"
     },
     {
         title: "Lant Pritchett - National Development Delivers: And How!, Reforming Development Economics",
-        author: "",
+        author: "Lant Pritchett",
         episode: 57,
         episodeTitle: "How to do Development",
         coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Lant+Pritchett+-+National+Development+Delivers:+And+How!,+Reforming+Development+Economics",
+        googleBooksUrl: "https://lantpritchett.org/wp-content/uploads/2021/05/Development-Delivers_firstdraft.pdf",
         tags: ["bir-sessions", "book", "economics", "development"],
         notes: ""
     },
@@ -1334,7 +1334,7 @@ const books = [
         author: "Barry Lopez",
         episode: 58,
         episodeTitle: "Switzerland in India",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://www.penguin.co.uk/_next/image?url=https%3A%2F%2Fcdn.penguin.co.uk%2Fdam-assets%2Fbooks%2F9781529111248%2F9781529111248-jacket-large.jpg&w=819&q=100",
         googleBooksUrl: "https://books.google.com/books?q=Horizon+-+Barry+Lopez",
         tags: ["bir-sessions", "book", "nature", "essays"],
         notes: ""
@@ -1344,7 +1344,7 @@ const books = [
         author: "Alain Bertaud",
         episode: 58,
         episodeTitle: "Switzerland in India",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://m.media-amazon.com/images/I/71dCxquwOPL._AC_UF1000,1000_QL80_.jpg",
         googleBooksUrl: "https://books.google.com/books?q=Order+without+Design+-+Alain+Bertaud",
         tags: ["bir-sessions", "book", "urbanism", "economics"],
         notes: ""
@@ -1361,10 +1361,10 @@ const books = [
     },
     {
         title: "How Innovation Works: And Why It Flourishes in Freedom",
-        author: "",
+        author: "Matt Ridley",
         episode: 59,
         episodeTitle: "Innovation Policy",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1577249358i/52219273.jpg",
         googleBooksUrl: "https://books.google.com/books?q=How+Innovation+Works:+And+Why+It+Flourishes+in+Freedom",
         tags: ["book", "innovation", "economics"],
         notes: ""
@@ -1514,7 +1514,7 @@ const books = [
         author: "Milton Friedman",
         episode: 67,
         episodeTitle: "Exchange Rate, Inflation",
-        coverUrl: "/api/placeholder/280/200",
+        coverUrl: "https://m.media-amazon.com/images/I/41OmZykY0HL.jpg",
         googleBooksUrl: "https://books.google.com/books?q=Essays+in+Positive+Economics+—\u00a0Milton+Friedman",
         tags: ["article", "essay", "economics"],
         notes: ""
@@ -1524,14 +1524,14 @@ const books = [
         author: "",
         episode: 67,
         episodeTitle: "Exchange Rate, Inflation",
-        coverUrl: "https://i.ytimg.com/vi/MvR7Dkg4NQU/maxresdefault.jpg",
+        coverUrl: "https://hips.hearstapps.com/hmg-prod/images/gettyimages-474081511.jpg?crop=0.5625xw:1xh;center,top&resize=640:*",
         googleBooksUrl: "https://www.youtube.com/watch?v=MvR7Dkg4NQU",
         tags: ["music", "album"],
         notes: ""
     },
     {
 title: "Paris, Texas",
-author: "",
+author: "Wim Wenders",
 episode: 67,
 episodeTitle: "Exchange Rate, Inflation",
 coverUrl: "https://a.ltrbxd.com/resized/film-poster/5/1/4/6/9/51469-paris-texas-0-2000-0-3000-crop.jpg?v=c8f2743612",
@@ -1541,7 +1541,7 @@ notes: ""
 },
 {
 title: "Perfect Days",
-author: "",
+author: "Wim Wenders",
 episode: 67,
 episodeTitle: "Exchange Rate, Inflation",
 coverUrl: "https://a.ltrbxd.com/resized/film-poster/8/7/9/2/2/9/879229-perfect-days-0-2000-0-3000-crop.jpg?v=4ea80661fd",
@@ -1551,7 +1551,7 @@ notes: ""
 },
 {
 title: "Introduction to Human Behavourial Biology",
-author: "",
+author: "Robert Sapolsky",
 episode: 70,
 episodeTitle: "Competitive Exams",
 coverUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Robert_Sapolsky_in_2023_A_16.jpg/1200px-Robert_Sapolsky_in_2023_A_16.jpg",
