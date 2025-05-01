@@ -136,7 +136,7 @@ const books = [
         episodeTitle: "Fighting Extremists",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Krzysztof+Kieślowski:+Dekalog,.+A+Short+Film+About+Love,+A+Short+Film+About+Killing",
-        tags: ["film"],
+        tags: ["movie"],
         notes: ""
     },
     {
@@ -976,7 +976,7 @@ const books = [
         episodeTitle: "Family Firms",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Godfather+trilogy+",
-        tags: ["movie", "film"],
+        tags: ["movie"  ],
         notes: ""
     },
     {
@@ -1026,7 +1026,7 @@ const books = [
         episodeTitle: "Hiking",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Rumblefish,+The+Outsiders+Francis+Ford+Coppola",
-        tags: ["special-interest", "movie", "film"],
+        tags: ["special-interest", "movie"  ],
         notes: ""
     },
     {
@@ -1076,7 +1076,7 @@ const books = [
         episodeTitle: "Surface area of Serendipity",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Anatomy+of+a+Fall+-+Justine+Triet",
-        tags: ["movie", "film"],
+        tags: ["movie"  ],
         notes: ""
     },
     {
@@ -1086,7 +1086,7 @@ const books = [
         episodeTitle: "Surface area of Serendipity",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Dead+Poet's+Society+-+Peter+Weir",
-        tags: ["movie", "film"],
+        tags: ["movie"  ],
         notes: ""
     },
     {
@@ -1176,7 +1176,7 @@ const books = [
         episodeTitle: "Maps are Magic",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Thelma+and+Louise+Ridley+Scott",
-        tags: ["bir-sessions", "movie", "film"],
+        tags: ["bir-sessions", "movie"  ],
         notes: ""
     },
     {
@@ -1256,7 +1256,7 @@ const books = [
         episodeTitle: "Lines on Maps",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Lives+of+Others+-+Florian+Henckel+von+Donnersmarck",
-        tags: ["bir-sessions", "movie", "film"],
+        tags: ["bir-sessions", "movie"  ],
         notes: ""
     },
     {
@@ -1536,7 +1536,7 @@ episode: 67,
 episodeTitle: "Exchange Rate, Inflation",
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Paris,+Texas",
-tags: ["movie", "film"],
+tags: ["movie",  ],
 notes: ""
 },
 {
@@ -1546,7 +1546,7 @@ episode: 67,
 episodeTitle: "Exchange Rate, Inflation",
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Perfect+Days",
-tags: ["movie", "film"],
+tags: ["movie",  ],
 notes: ""
 },
 {
