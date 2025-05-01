@@ -1306,7 +1306,7 @@ const books = [
         episodeTitle: "Digital Public Goods",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Cathedral+Raymond+Carver",
-        tags: ["digital", "public-goods", "book", "fiction", "short-stories"],
+        tags: ["book", "fiction", "short-stories"],
         notes: ""
     },
     {
@@ -1405,8 +1405,8 @@ const books = [
         episode: 61,
         episodeTitle: "The Outlaws",
         coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Boltzmann’s+Grave",
-        tags: ["book", "history", "science"],
+        googleBooksUrl: "https://www.atlasobscura.com/places/boltzmanns-grave",
+        tags: ["location"],
         notes: ""
     },
     {
