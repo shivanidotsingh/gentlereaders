@@ -1316,7 +1316,7 @@ const books = [
         episodeTitle: "Digital Public Goods",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Short+Cuts+(Film+based+on+Raymond+Carver+original+short+stories).",
-        tags: ["bir-sessions", "movie", "film", "short-stories adaptation"],
+        tags: ["bir-sessions", "movie", "short-stories-adaptation"],
         notes: ""
     },
     {
@@ -1555,7 +1555,7 @@ author: "",
 episode: 70,
 episodeTitle: "Competitive Exams",
 coverUrl: "/api/placeholder/280/200",
-googleBooksUrl: "https://books.google.com/books?q=Introduction+to+Human+Behavourial+Biology",
+googleBooksUrl: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
 tags: ["competitive-exams", "biology", "behavior"],
 notes: ""
 },
