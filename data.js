@@ -47,7 +47,7 @@ const books = [
         coverUrl: "https://books.google.com/books/content?id=xNKuBgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         googleBooksUrl: "https://books.google.com/books?id=xNKuBgAAQBAJ",
         tags: ["book"],
-        notes: "about the two Marys"
+        notes: "About the two Marys"
     },
     {
         title: "Saaya & the Rituals of Tamil Muslim Milk Tea",
@@ -56,7 +56,7 @@ const books = [
         episodeTitle: "Singularity",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Saaya+Tamil+Muslim+Milk+Tea",
-        tags: ["book"],
+        tags: [],
         notes: ""
     },
     {
@@ -151,7 +151,7 @@ const books = [
     },
     {
         title: "The Life and Death of Great American Cities",
-        author: "",
+        author: "Jane Jacobs",
         episode: 5,
         episodeTitle: "Oppenheimer",
         coverUrl: "/api/placeholder/280/200",
@@ -231,17 +231,17 @@ const books = [
     },
     {
         title: "Essays in Persuasion, Essays in Biography",
-        author: "John Keynes (who they disagree with).",
+        author: "John Keynes",
         episode: 7,
         episodeTitle: "Newton and Gandhi",
         coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Essays+in+Persuasion,+Essays+in+Biography-John+Keynes+(who+they+disagree+with).",
+        googleBooksUrl: "https://books.google.com/books?q=Essays+in+Persuasion,+Essays+in+Biography-John+Keynes",
         tags: ["article", "essay", "book"],
-        notes: ""
+        notes: "Ajay and Amit generall disagree with Keyes"
     },
     {
         title: "The Essays of Paul Graham",
-        author: "",
+        author: "Paul Graham",
         episode: 7,
         episodeTitle: "Newton and Gandhi",
         coverUrl: "/api/placeholder/280/200",
@@ -546,7 +546,7 @@ const books = [
         episodeTitle: "China Model",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Alison+Bechdel+-+The+Essential+Dykes+To+Watch+Out+For,+Fun+Home",
-        tags: ["book", "graphic novel", "memoir"],
+        tags: ["book", "graphic-novel", "memoir"],
         notes: ""
     },
     {
@@ -556,7 +556,7 @@ const books = [
         episodeTitle: "China Model",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Blankets+Craig+Thompson",
-        tags: ["book", "graphic novel", "memoir"],
+        tags: ["book", "graphic-novel", "memoir"],
         notes: ""
     },
     {
@@ -566,7 +566,7 @@ const books = [
         episodeTitle: "China Model",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=China's+Future+David+Shambaugh",
-        tags: ["book", "politics", "international relations"],
+        tags: ["book", "politics", "international-relations"],
         notes: ""
     },
     {
@@ -576,7 +576,7 @@ const books = [
         episodeTitle: "China Model",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Ghost+World+-+Daniel+Clowes",
-        tags: ["book", "graphic novel"],
+        tags: ["book", "graphic-novel"],
         notes: ""
     },
     {
@@ -756,7 +756,7 @@ const books = [
         episodeTitle: "Stories that should be films",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=My+Friend+Sancho+-+Amit+Varma",
-        tags: ["special-interest", "fiction", "indian literature"],
+        tags: ["special-interest", "fiction", "indian-literature"],
         notes: ""
     },
     {
@@ -866,7 +866,7 @@ const books = [
         episodeTitle: "Vaccines and Freedom",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Beggars+in+Spain+-+Nancy.+Kress",
-        tags: ["book", "fiction", "science fiction"],
+        tags: ["book", "fiction", "science-fiction"],
         notes: ""
     },
     {
@@ -896,7 +896,7 @@ const books = [
         episodeTitle: "Declutter",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=The+Paper+Menagerie+-+Ken+Liu",
-        tags: ["special-interest", "fiction", "short stories"],
+        tags: ["special-interest", "fiction", "short-stories"],
         notes: ""
     },
     {
@@ -1036,8 +1036,8 @@ const books = [
         episodeTitle: "Long Road to Change",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Runaway,+Hateship,+Friendship,+Courtship,+Loveship,+Marriage,+The+Bear+Came+Over+the+Mountain+-+Alice+Munro",
-        tags: ["book", "fiction", "short stories"],
-        notes: ""
+        tags: ["book", "fiction", "short-stories"],
+        notes: "Amit's Favorite Author"
     },
     {
         title: "Weapons of the Weak, Against the Grain",
@@ -1230,13 +1230,13 @@ const books = [
         notes: ""
     },
     {
-        title: "Research papers list by Ajay.",
+        title: "Research papers list by Ajay",
         author: "",
         episode: 48,
         episodeTitle: "Graduating to Globalisation",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Research+papers+list+by+Ajay.",
-        tags: ["bir-sessions", "research-papers"],
+        tags: ["research-papers"],
         notes: ""
     },
     {
@@ -1276,7 +1276,7 @@ const books = [
         episodeTitle: "Education",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Lydia+Davis:+Collected+stories,+Essays",
-        tags: ["bir-sessions", "book", "short stories", "essays"],
+        tags: ["bir-sessions", "book", "short-stories", "essays"],
         notes: ""
     },
     {
@@ -1306,17 +1306,17 @@ const books = [
         episodeTitle: "Digital Public Goods",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Cathedral+Raymond+Carver",
-        tags: ["digital", "public goods", "book", "fiction", "short stories"],
+        tags: ["digital", "public-goods", "book", "fiction", "short-stories"],
         notes: ""
     },
     {
-        title: "Short Cuts (Film based on Raymond Carver original short stories).",
+        title: "Short Cuts (Film based on Raymond Carver original short-stories).",
         author: "",
         episode: 56,
         episodeTitle: "Digital Public Goods",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Short+Cuts+(Film+based+on+Raymond+Carver+original+short+stories).",
-        tags: ["bir-sessions", "movie", "film", "short stories adaptation"],
+        tags: ["bir-sessions", "movie", "film", "short-stories adaptation"],
         notes: ""
     },
     {
@@ -1366,7 +1366,7 @@ const books = [
         episodeTitle: "Innovation Policy",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=How+Innovation+Works:+And+Why+It+Flourishes+in+Freedom",
-        tags: ["bir-sessions", "book", "innovation", "economics"],
+        tags: ["book", "innovation", "economics"],
         notes: ""
     },
     {
@@ -1376,7 +1376,7 @@ const books = [
         episodeTitle: "Innovation Policy",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Huntsville,+Alabama+(to+study).",
-        tags: ["bir-sessions", "place", "study"],
+        tags: ["place", "study"],
         notes: ""
     },
     {
@@ -1446,7 +1446,7 @@ const books = [
         episodeTitle: "Knowledge Lost and Regained",
         coverUrl: "/api/placeholder/280/200",
         googleBooksUrl: "https://books.google.com/books?q=Nightfall+—\u00a0Isaac+Asimov",
-        tags: ["book", "fiction", "science fiction"],
+        tags: ["book", "fiction", "science-fiction"],
         notes: ""
     },
     {
@@ -1556,7 +1556,7 @@ episode: 70,
 episodeTitle: "Competitive Exams",
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Introduction+to+Human+Behavourial+Biology",
-tags: ["competitive exams", "biology", "behavior"],
+tags: ["competitive-exams", "biology", "behavior"],
 notes: ""
 },
 {
