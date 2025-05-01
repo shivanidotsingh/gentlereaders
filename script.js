@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterMediaBtn = document.getElementById('filter-media');
     // Filter Button Elements
     const filterMovieBtn = document.getElementById('filter-movie');
-    const filterMusicBtn = document.getElementById('filter-music'); // Renamed from song
+    const filterMusicBtn = documentgetElementById('filter-music'); // Renamed from song
     const filterBirSessionsBtn = document.getElementById('filter-bir-sessions');
     const filterSpecialInterestBtn = document.getElementById('filter-special-interest');
     const filterArticleEssayBtn = document.getElementById('filter-article-essay');
@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSort = 'title';
     let searchTerm = '';
     let currentFilter = 'all'; // Initial filter state
+
+    // Helper function to convert tag string to a valid CSS class name (kebab-case)
+    function tagToClassName(tag) {
+        return tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9_-]/g, '');
+    }
 
     // Render all books
     function renderBooks() {
@@ -38,9 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Tag filtering
             let matchesFilter = false; // Start assuming no match
-            // Convert tags to lowercase for case-insensitive matching
             const tags = book.tags || []; // Ensure tags is an array, even if missing
-            const lowerCaseTags = tags.map(tag => tag.toLowerCase());
+            // No need to lowercase here, filtering checks will handle it
 
 
             if (currentFilter === 'all') {
@@ -48,27 +52,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Removed 'special' filter case
             else if (currentFilter === 'books') {
-                 matchesFilter = lowerCaseTags.includes('book'); // Check if 'book' tag exists
+                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('book'); // Check if 'book' tag exists
             }
             // Filtering logic for specific tags
             else if (currentFilter === 'movie') {
-                 matchesFilter = lowerCaseTags.includes('movie') || lowerCaseTags.includes('film'); // Include both 'movie' and 'film'
+                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('movie') || tags.map(tag => tag.toLowerCase()).includes('film'); // Include both 'movie' and 'film'
             }
             else if (currentFilter === 'music') {
-                 matchesFilter = lowerCaseTags.includes('music'); // Check for 'music' tag
+                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('music'); // Check for 'music' tag
             } else if (currentFilter === 'bir-sessions') {
-                 matchesFilter = lowerCaseTags.includes('bir-sessions'); // Check for 'bir-sessions' tag
+                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('bir-sessions'); // Check for 'bir-sessions' tag
             } else if (currentFilter === 'special-interest') {
-                 matchesFilter = lowerCaseTags.includes('special-interest'); // Check for 'special-interest' tag
+                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('special-interest'); // Check for 'special-interest' tag
             }
             // Filtering logic for 'article-essay' to check for 'article' OR 'essay'
             else if (currentFilter === 'article-essay') {
-                 matchesFilter = lowerCaseTags.includes('article') || lowerCaseTags.includes('essay'); // Check for 'article' OR 'essay'
+                 matchesFilter = tags.map(tag => tag.toLowerCase()).includes('article') || tags.map(tag => tag.toLowerCase()).includes('essay'); // Check for 'article' OR 'essay'
             }
             else if (currentFilter === 'media') {
                  // This filter shows items that are NOT 'book' and don't match the specific filters
                  const specificTags = ['book', 'movie', 'film', 'music', 'bir-sessions', 'special-interest', 'article', 'essay']; // Include all specific filter tags
-                 matchesFilter = !specificTags.some(tag => lowerCaseTags.includes(tag));
+                 // Check if the item has ANY of the specific tags. If it does, it's NOT 'media' in this context.
+                 const hasSpecificTag = specificTags.some(specificTag =>
+                      tags.map(tag => tag.toLowerCase()).includes(specificTag)
+                 );
+                 matchesFilter = !tags.map(tag => tag.toLowerCase()).includes('book') && !hasSpecificTag;
             }
 
             return matchesSearch && matchesFilter;
@@ -93,12 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
             card.href = book.googleBooksUrl; // Keep Google Books URL for the link
             card.target = '_blank';
 
-            // Prepare tags for display
-            const tagsLabel = (book.tags || []).join(' / '); // Join tags with ' / ' for display
+            // Prepare tags for display and add classes
+            const tagsHtml = (book.tags || []).map(tag => {
+                // Create a span for each tag to style them individually
+                const className = tagToClassName(tag); // Get CSS class name for the tag
+                return `<span class="card-type ${className}">${tag}</span>`;
+            }).join(''); // Join the spans together
 
 
             // Determine card-image class based on coverUrl
              const cardImageClass = book.coverUrl && book.coverUrl !== "/api/placeholder/280/200" ? '' : 'no-image';
+
+
+            // Removed check for 'special' tag for title styling
 
 
             // Create card HTML with fallback for image loading errors
@@ -108,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="card-title">${book.title}</h3>
                     <div class="card-author">${book.author}</div>
                     <div class="card-badges">
-                        <span class="card-type">${tagsLabel}</span>
-                        <span class="card-episode">Episode ${book.episode}</span>
+                        ${tagsHtml} <span class="card-episode">Episode ${book.episode}</span>
                     </div>
                     ${book.notes ? `<div class="card-notes">${book.notes}</div>` : ''}
                 </div>
