@@ -974,8 +974,8 @@ const books = [
         author: "",
         episode: 34,
         episodeTitle: "Family Firms",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=The+Godfather+trilogy+",
+        coverUrl: "https://a.ltrbxd.com/resized/film-poster/5/1/8/1/8/51818-the-godfather-0-2000-0-3000-crop.jpg?v=bca8b67402",
+        googleBooksUrl: "https://letterboxd.com/film/the-godfather/",
         tags: ["movie"  ],
         notes: ""
     },
@@ -1020,14 +1020,14 @@ const books = [
         notes: ""
     },
     {
-        title: "Rumblefish, The Outsiders",
+        title: "The Outsiders",
         author: "Francis Ford Coppola",
         episode: 35,
         episodeTitle: "Hiking",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Rumblefish,+The+Outsiders+Francis+Ford+Coppola",
+        coverUrl: "https://a.ltrbxd.com/resized/film-poster/5/1/8/2/9/51829-the-outsiders-0-2000-0-3000-crop.jpg?v=6596aa5148",
+        googleBooksUrl: "https://letterboxd.com/film/the-outsiders/",
         tags: ["special-interest", "movie"  ],
-        notes: ""
+        notes: "Also, Rumblefish"
     },
     {
         title: "Runaway, Hateship, Friendship, Courtship, Loveship, Marriage, The Bear Came Over the Mountain",
@@ -1074,8 +1074,8 @@ const books = [
         author: "Justine Triet",
         episode: 39,
         episodeTitle: "Surface area of Serendipity",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Anatomy+of+a+Fall+-+Justine+Triet",
+        coverUrl: "https://a.ltrbxd.com/resized/film-poster/8/2/2/0/9/3/822093-anatomy-of-a-fall-0-2000-0-3000-crop.jpg?v=4efab8aedc",
+        googleBooksUrl: "https://letterboxd.com/film/anatomy-of-a-fall/",
         tags: ["movie"  ],
         notes: ""
     },
@@ -1084,9 +1084,9 @@ const books = [
         author: "Peter Weir",
         episode: 39,
         episodeTitle: "Surface area of Serendipity",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Dead+Poet's+Society+-+Peter+Weir",
-        tags: ["movie"  ],
+        coverUrl: "https://a.ltrbxd.com/resized/film-poster/5/1/8/4/6/51846-dead-poets-society-0-2000-0-3000-crop.jpg?v=9273e8acf7",
+        googleBooksUrl: "https://letterboxd.com/film/dead-poets-society/",
+        tags: ["movie"],
         notes: ""
     },
     {
@@ -1104,8 +1104,8 @@ const books = [
         author: "",
         episode: 40,
         episodeTitle: "Future of Electricity",
-        coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=World+Energy+Outlook+2023+",
+        coverUrl: "https://oneplanetschool.wwf.it/sites/default/files/styles/cover/public/cover/weo.png?itok=9pWYNeaT",
+        googleBooksUrl: "https://www.iea.org/reports/world-energy-outlook-2023",
         tags: ["report", "energy", "economics"],
         notes: ""
     },
