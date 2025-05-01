@@ -1113,7 +1113,7 @@ author: "",
 episode: 48,
 coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Research+papers+list+by+Ajay.",
-tags: ["bir-sessions", "research papers"],
+tags: ["bir-sessions", "research-papers"],
 notes: ""
 },
 {
