@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Current states
-    let currentSort = 'title';
+    let currentSort = 'episode';
     let searchTerm = '';
     let currentFilter = 'all'; // Initial filter state
 
