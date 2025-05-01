@@ -107,28 +107,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `<span class="card-type ${className}">${tag}</span>`;
             }).join(''); // Join the spans together
 
-            // Prepare episode info HTML
-            // Display Episode Title if available, otherwise just Episode Number
-            const episodeHtml = `
-                <span class="card-episode">Episode ${book.episode}</span>
-                ${book.episodeTitle ? `<span class="card-episode-title">${book.episodeTitle}</span>` : ''}
-            `;
+            // Prepare episode info HTML (format: Number. Title)
+            // Only create this div if episode or episodeTitle exists
+            let episodeInfoDiv = '';
+            if (book.episode || book.episodeTitle) { // Check if either exists
+                 const episodeDisplay = `${book.episode || ''}${book.episode ? '.' : ''} ${book.episodeTitle || ''}`;
+                 episodeInfoDiv = `<div class="card-episode-info">${episodeDisplay.trim()}</div>`; // Trim handles cases where episode/title is missing
+            }
 
 
             // Determine card-image class based on coverUrl
              const cardImageClass = book.coverUrl && book.coverUrl !== "/api/placeholder/280/200" ? '' : 'no-image';
 
 
-            // Create card HTML with fallback for image loading errors
+            // Create card HTML
             card.innerHTML = `
                 <div class="card-image ${cardImageClass}" style="background-image: url('${book.coverUrl}')" onerror="this.classList.add('no-image'); this.style.backgroundImage='none';"></div>
                 <div class="card-content">
                     <h3 class="card-title">${book.title}</h3>
                     <div class="card-author">${book.author}</div>
                     <div class="card-badges">
-                        ${tagsHtml} ${episodeHtml} </div>
+                        ${tagsHtml} </div>
                     ${book.notes ? `<div class="card-notes">${book.notes}</div>` : ''}
-                </div>
+                    ${episodeInfoDiv} </div>
             `;
 
             booksContainer.appendChild(card);
@@ -306,3 +307,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderBooks();
     loadBookCovers();
 });
+
