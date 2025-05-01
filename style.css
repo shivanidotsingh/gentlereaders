@@ -144,7 +144,7 @@ button.active {
     height: 240px; 
     background-color: #e0e0e0; 
     background-position: top center; 
-    background-size: contain; 
+    background-size: cover; 
     background-repeat: no-repeat; 
     position: relative; 
     overflow: hidden; 
