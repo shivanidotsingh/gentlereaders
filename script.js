@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // DOM elements for filters
     const filterAllBtn = document.getElementById('filter-all');
-    // Removed the filterSpecialBtn as per previous discussion
+    // Removed the filterSpecialBtn
     const filterBooksBtn = document.getElementById('filter-books');
     const filterMediaBtn = document.getElementById('filter-media');
-    // New Filter Button Elements
+    // Filter Button Elements
     const filterMovieBtn = document.getElementById('filter-movie');
     const filterMusicBtn = document.getElementById('filter-music'); // Renamed from song
     const filterBirSessionsBtn = document.getElementById('filter-bir-sessions');
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (currentFilter === 'books') {
                  matchesFilter = lowerCaseTags.includes('book'); // Check if 'book' tag exists
             }
-            // Filtering logic for kebab-case and individual tags
+            // Filtering logic for specific tags
             else if (currentFilter === 'movie') {
-                 matchesFilter = lowerCaseTags.includes('movie') || lowerCaseTags.includes('film'); // Still check for both if applicable
+                 matchesFilter = lowerCaseTags.includes('movie') || lowerCaseTags.includes('film'); // Include both 'movie' and 'film'
             }
             else if (currentFilter === 'music') {
                  matchesFilter = lowerCaseTags.includes('music'); // Check for 'music' tag
@@ -61,17 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (currentFilter === 'special-interest') {
                  matchesFilter = lowerCaseTags.includes('special-interest'); // Check for 'special-interest' tag
             }
-            // Updated filtering logic for 'article-essay' to check for 'article' OR 'essay'
+            // Filtering logic for 'article-essay' to check for 'article' OR 'essay'
             else if (currentFilter === 'article-essay') {
                  matchesFilter = lowerCaseTags.includes('article') || lowerCaseTags.includes('essay'); // Check for 'article' OR 'essay'
             }
             else if (currentFilter === 'media') {
                  // This filter shows items that are NOT 'book' and don't match the specific filters
-                 const specificTags = ['book', 'movie', 'film', 'music', 'bir-sessions', 'special-interest', 'article', 'essay']; // Include all specific filter tags (removed 'article-essay')
+                 const specificTags = ['book', 'movie', 'film', 'music', 'bir-sessions', 'special-interest', 'article', 'essay']; // Include all specific filter tags
                  matchesFilter = !specificTags.some(tag => lowerCaseTags.includes(tag));
             }
-
-            // With no 'special' tag, no need for the isSpecial check here
 
             return matchesSearch && matchesFilter;
         });
@@ -92,18 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
         sortedBooks.forEach(book => {
             const card = document.createElement('a');
             card.className = 'card';
-            card.href = book.googleBooksUrl;
+            card.href = book.googleBooksUrl; // Keep Google Books URL for the link
             card.target = '_blank';
 
             // Prepare tags for display
-            // Display original tags, not necessarily lowercase or kebab-case
             const tagsLabel = (book.tags || []).join(' / '); // Join tags with ' / ' for display
 
 
             // Determine card-image class based on coverUrl
              const cardImageClass = book.coverUrl && book.coverUrl !== "/api/placeholder/280/200" ? '' : 'no-image';
-
-            // Removed check for 'special' tag for title styling
 
 
             // Create card HTML with fallback for image loading errors
@@ -148,8 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateFilterButtons();
         renderBooks();
     });
-
-    // Removed event listener for filterSpecialBtn
 
     filterBooksBtn.addEventListener('click', () => {
         currentFilter = 'books';
@@ -208,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateFilterButtons() {
         filterAllBtn.classList.toggle('active', currentFilter === 'all');
-        // Removed active state toggle for filterSpecialBtn
         filterBooksBtn.classList.toggle('active', currentFilter === 'books');
         filterMovieBtn.classList.toggle('active', currentFilter === 'movie');
         filterMusicBtn.classList.toggle('active', currentFilter === 'music');
@@ -218,19 +210,26 @@ document.addEventListener('DOMContentLoaded', () => {
         filterMediaBtn.classList.toggle('active', currentFilter === 'media');
     }
 
-    // Function to fetch book cover from Google Books API
+    // Function to fetch book cover from Open Library API
     async function fetchBookCover(title, author) {
         try {
-            const query = encodeURIComponent(`${title} ${author}`);
-            const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=1`;
-            const response = await fetch(url);
-            const data = await response.json();
-            if (data.items && data.items[0].volumeInfo && data.items[0].volumeInfo.imageLinks && data.items[0].volumeInfo.imageLinks.thumbnail) {
-                return data.items[0].volumeInfo.imageLinks.thumbnail;
+            // Construct the search query for Open Library
+            const query = encodeURIComponent(`${title} by ${author}`);
+            const searchUrl = `https://openlibrary.org/search.json?q=${query}&limit=1`;
+
+            const searchResponse = await fetch(searchUrl);
+            const searchData = await searchResponse.json();
+
+            if (searchData.docs && searchData.docs.length > 0 && searchData.docs[0].cover_i) {
+                const coverId = searchData.docs[0].cover_i;
+                // Construct the cover image URL using the Covers API (M for medium size)
+                const coverUrl = `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`;
+                return coverUrl;
             }
-            return null;
+
+            return null; // No cover found
         } catch (error) {
-            console.error('Error fetching book cover:', error);
+            console.error('Error fetching book cover from Open Library:', error);
             return null;
         }
     }
@@ -239,7 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadBookCovers() {
         let coversLoaded = false;
         for (let book of books) {
-            if (book.coverUrl === "/api/placeholder/280/200" && book.title && book.author) { // Check if title and author exist
+            // Only attempt to fetch if the coverUrl is the placeholder and title/author exist
+            if (book.coverUrl === "/api/placeholder/280/200" && book.title && book.author) {
                 const coverUrl = await fetchBookCover(book.title, book.author);
                 if (coverUrl) {
                     book.coverUrl = coverUrl;
