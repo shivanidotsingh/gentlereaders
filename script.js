@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterMediaBtn = document.getElementById('filter-media');
     // Filter Button Elements
     const filterMovieBtn = document.getElementById('filter-movie');
-    const filterMusicBtn = document.getElementById('filter-music'); // Renamed from song
+    const filterMusicBtn = document.getElementById('filter-music');
     const filterBirSessionsBtn = document.getElementById('filter-bir-sessions');
     const filterSpecialInterestBtn = document.getElementById('filter-special-interest');
     const filterArticleEssayBtn = document.getElementById('filter-article-essay');
@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                  matchesFilter = !lowerCaseTags.includes('book') && !hasSpecificTag;
             }
 
+
             return matchesSearch && matchesFilter;
         });
 
@@ -106,6 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `<span class="card-type ${className}">${tag}</span>`;
             }).join(''); // Join the spans together
 
+            // Prepare episode info HTML
+            // Display Episode Title if available, otherwise just Episode Number
+            const episodeHtml = `
+                <span class="card-episode">Episode ${book.episode}</span>
+                ${book.episodeTitle ? `<span class="card-episode-title">${book.episodeTitle}</span>` : ''}
+            `;
+
 
             // Determine card-image class based on coverUrl
              const cardImageClass = book.coverUrl && book.coverUrl !== "/api/placeholder/280/200" ? '' : 'no-image';
@@ -118,8 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="card-title">${book.title}</h3>
                     <div class="card-author">${book.author}</div>
                     <div class="card-badges">
-                        ${tagsHtml} <span class="card-episode">Episode ${book.episode}</span>
-                    </div>
+                        ${tagsHtml} ${episodeHtml} </div>
                     ${book.notes ? `<div class="card-notes">${book.notes}</div>` : ''}
                 </div>
             `;
@@ -165,36 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooks();
     });
 
-    filterMusicBtn.addEventListener('click', () => {
-        currentFilter = 'music';
-        updateFilterButtons();
-        renderBooks();
-    });
-
-    filterBirSessionsBtn.addEventListener('click', () => {
-        currentFilter = 'bir-sessions';
-        updateFilterButtons();
-        renderBooks();
-    });
-
-    filterSpecialInterestBtn.addEventListener('click', () => {
-        currentFilter = 'special-interest';
-        updateFilterButtons();
-        renderBooks();
-    });
-
-    filterArticleEssayBtn.addEventListener('click', () => {
-        currentFilter = 'article-essay';
-        updateFilterButtons();
-        renderBooks();
-    });
-
-     filterMediaBtn.addEventListener('click', () => {
-        currentFilter = 'media';
-        updateFilterButtons();
-        renderBooks();
-    });
-
+    filterMusicBtn.classList.classList.toggle('active', currentFilter === 'music');
+    filterBirSessionsBtn.classList.toggle('active', currentFilter === 'bir-sessions');
+    filterSpecialInterestBtn.classList.toggle('active', currentFilter === 'special-interest');
+    filterArticleEssayBtn.classList.toggle('active', currentFilter === 'article-essay');
+    filterMediaBtn.classList.toggle('active', currentFilter === 'media');
+    }
 
     // Search functionality
     searchInput.addEventListener('input', (e) => {
