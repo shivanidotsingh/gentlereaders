@@ -118,11 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Determine card-image class based on coverUrl
              const cardImageClass = book.coverUrl && book.coverUrl !== "/api/placeholder/280/200" ? '' : 'no-image';
+             // Use higher resolution placeholders for better portrait orientation
+             const placeholderUrl = book.coverUrl === "/api/placeholder/280/200" ? "/api/placeholder/200/280" : book.coverUrl;
 
 
             // Create card HTML
             card.innerHTML = `
-                <div class="card-image ${cardImageClass}" style="background-image: url('${book.coverUrl}')" onerror="this.classList.add('no-image'); this.style.backgroundImage='none';"></div>
+                <div class="card-image ${cardImageClass}" style="background-image: url('${placeholderUrl}')" onerror="this.classList.add('no-image'); this.style.backgroundImage='none';"></div>
                 <div class="card-content">
                     <h3 class="card-title">${book.title}</h3>
                     <div class="card-author">${book.author}</div>
