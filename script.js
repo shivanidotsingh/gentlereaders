@@ -172,12 +172,36 @@ document.addEventListener('DOMContentLoaded', () => {
         renderBooks();
     });
 
-    filterMusicBtn.classList.classList.toggle('active', currentFilter === 'music');
-    filterBirSessionsBtn.classList.toggle('active', currentFilter === 'bir-sessions');
-    filterSpecialInterestBtn.classList.toggle('active', currentFilter === 'special-interest');
-    filterArticleEssayBtn.classList.toggle('active', currentFilter === 'article-essay');
-    filterMediaBtn.classList.toggle('active', currentFilter === 'media');
-    }
+    filterMusicBtn.addEventListener('click', () => {
+        currentFilter = 'music';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+    filterBirSessionsBtn.addEventListener('click', () => {
+        currentFilter = 'bir-sessions';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+    filterSpecialInterestBtn.addEventListener('click', () => {
+        currentFilter = 'special-interest';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+    filterArticleEssayBtn.addEventListener('click', () => {
+        currentFilter = 'article-essay';
+        updateFilterButtons();
+        renderBooks();
+    });
+
+     filterMediaBtn.addEventListener('click', () => {
+        currentFilter = 'media';
+        updateFilterButtons();
+        renderBooks();
+    });
+
 
     // Search functionality
     searchInput.addEventListener('input', (e) => {
