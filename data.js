@@ -4,8 +4,8 @@ const books = [
         author: "U2",
         episode: 1,
         episodeTitle: "Episode 1",
-        coverUrl: "https://www.u2.com/media/uploads/2022/12/15/songs-of-surrender-product-shot.jpg",
-        googleBooksUrl: "https://books.google.com/books?q=U2+Songs+of+Surrender",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/U2_in_Milan_%2831515306638%29.jpg/2880px-U2_in_Milan_%2831515306638%29.jpg",
+        googleBooksUrl: "https://open.spotify.com/album/3fqPfbVHsvdpovpJXOJlvU",
         tags: ["music"],
         notes: ""
     },
@@ -14,7 +14,7 @@ const books = [
         author: "Mark Haddon",
         episode: 1,
         episodeTitle: "Episode 1",
-        coverUrl: "https://books.google.com/books/content?id=OWUbAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/en/0/03/Curiousincidentofdoginnighttime.jpg",
         googleBooksUrl: "https://books.google.com/books?id=OWUbAQAAMAAJ",
         tags: ["book"],
         notes: ""
@@ -24,7 +24,7 @@ const books = [
         author: "Mary Wollstonecraft",
         episode: 2,
         episodeTitle: "Singularity",
-        coverUrl: "https://books.google.com/books/content?id=qhcFAAAAQAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/A_Vindication_of_the_Rights_of_Woman_title_page.jpg/1024px-A_Vindication_of_the_Rights_of_Woman_title_page.jpg",
         googleBooksUrl: "https://books.google.com/books?id=qhcFAAAAQAAJ",
         tags: ["book"],
         notes: ""
@@ -34,7 +34,7 @@ const books = [
         author: "Mary Shelley",
         episode: 2,
         episodeTitle: "Singularity",
-        coverUrl: "https://books.google.com/books/content?id=2Zc3AAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Christie%27s_auction_scan_of_Frankenstein_1818.jpg/1280px-Christie%27s_auction_scan_of_Frankenstein_1818.jpg",
         googleBooksUrl: "https://books.google.com/books?id=2Zc3AAAAYAAJ",
         tags: ["book"],
         notes: "Daughter of Mary Wollstonecraft"
@@ -44,7 +44,7 @@ const books = [
         author: "Charlotte Gordon",
         episode: 2,
         episodeTitle: "Singularity",
-        coverUrl: "https://books.google.com/books/content?id=xNKuBgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        coverUrl: "https://covers.openlibrary.org/b/id/10302599-L.jpg",
         googleBooksUrl: "https://books.google.com/books?id=xNKuBgAAQBAJ",
         tags: ["book"],
         notes: "About the two Marys"
@@ -64,8 +64,8 @@ const books = [
         author: "Eamonn Butler",
         episode: 3,
         episodeTitle: "Version of yourself",
-        coverUrl: "https://books.google.com/books/content?id=yYtXDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        googleBooksUrl: "https://books.google.com/books?id=yYtXDwAAQBAJ",
+        coverUrl: "https://londonpublishingpartnership.co.uk/wp-content/uploads/2024/05/adam-smith-a-primer.jpg",
+        googleBooksUrl: "https://iea.org.uk/wp-content/uploads/2016/07/upldbook414pdf.pdf",
         tags: ["book"],
         notes: ""
     },
@@ -75,7 +75,7 @@ const books = [
         episode: 3,
         episodeTitle: "Version of yourself",
         coverUrl: "/api/placeholder/280/200",
-        googleBooksUrl: "https://books.google.com/books?q=Classical+Liberalism+-+A+Primer+Eamonn+Butler",
+        googleBooksUrl: "https://iea.org.uk/wp-content/uploads/2016/07/Butler-interactive.pdf",
         tags: ["book"],
         notes: ""
     },
