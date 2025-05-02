@@ -1568,5 +1568,47 @@ coverUrl: "/api/placeholder/280/200",
 googleBooksUrl: "https://books.google.com/books?q=Capital+Ideas:+The+Improbable+Origins+of+Modern+Wall+Street",
 tags: ["book", "finance", "history"],
 notes: ""
-}
+},
+    {
+        title: "The Story of Art",
+        author: " EH Gombrich",
+        episode: 97,
+        episodeTitle: "The Light in Winter",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/en/8/81/TheStoryOfArt.jpg",
+        googleBooksUrl: "https://books.google.se/books/about/The_Story_of_Art_16th_Edition.html?id=e_1M3BKhC-8C&redir_esc=y",
+        tags: ["book"],
+        notes: ""
+    },
+    
+    {
+        title: "The Spirit of Indian Painting",
+        author: "BN Goswamy",
+        episode: 97,
+        episodeTitle: "The Light in Winter",
+        coverUrl: "https://m.media-amazon.com/images/I/61QeK3y2vPL._AC_UF1000,1000_QL80_.jpg",
+        googleBooksUrl: "https://books.google.com/books?q=The+Spirit+of+Indian+Painting",
+        tags: ["book"],
+        notes: ""
+    },
+    
+    {
+        title: "Ways of Seeing",
+        author: "John Berger",
+        episode: 97,
+        episodeTitle: "The Light in Winter",
+        coverUrl: "https://upload.wikimedia.org/wikipedia/en/e/e3/Waysofseeingcvr.jpg",
+        googleBooksUrl: "https://www.ways-of-seeing.com/",
+        tags: ["book"],
+        notes: ""
+    },
+    {
+        title: "The Shock of the New ",
+        author: "Robert Hughes",
+        episode: 97,
+        episodeTitle: "The Light in Winter",
+        coverUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1175649708i/542639.jpg",
+        googleBooksUrl: "https://books.google.com/books?q=The+Shock+of+the+New",
+        tags: ["book"],
+        notes: ""
+    }
 ];
