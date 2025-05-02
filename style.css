@@ -124,7 +124,7 @@ button.active {
 .card { 
     background-color: var(--card-bg); 
     border: 1px solid var(--border-color); 
-    border-radius: 8px; 
+    border-radius: 0px; 
     overflow: hidden; 
     transition: transform 0.2s, box-shadow 0.2s; 
     text-decoration: none; 
