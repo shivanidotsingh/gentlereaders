@@ -1610,5 +1610,25 @@ notes: ""
         googleBooksUrl: "https://books.google.com/books?q=The+Shock+of+the+New",
         tags: ["book"],
         notes: ""
+    },
+    {
+        title: "Politics as a Vocation",
+        author: "Max Weber",
+        episode: 98,
+        episodeTitle: "The Legitimacy of State",
+        coverUrl: "https://m.media-amazon.com/images/I/71Swvwj007L._AC_UF1000,1000_QL80_.jpg",
+        googleBooksUrl: "https://www.goodreads.com/book/show/35452932-politics-as-a-vocation",
+        tags: ["book"],
+        notes: ""
+    },
+    {
+        title: "When All Else Fails",
+        author: "Jason Brennan",
+        episode: 98,
+        episodeTitle: "The Legitimacy of State",
+        coverUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1613687373i/39964445.jpg",
+        googleBooksUrl: "https://www.goodreads.com/book/show/39964445-when-all-else-fails",
+        tags: ["book"],
+        notes: ""
     }
 ];
